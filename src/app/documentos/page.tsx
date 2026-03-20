@@ -60,20 +60,20 @@ const mockDocumentos: Documento[] = [
   {
     id: "1",
     tipo: "POLITICA",
-    titulo: "Politica de Privacidad",
-    descripcion: "Politica general de privacidad de la organizacion conforme a la Ley 21.719",
-    contenido: "Contenido de la politica de privacidad...",
+    titulo: "Política de Privacidad",
+    descripcion: "Política general de privacidad de la organización conforme a la Ley 21.719",
+    contenido: "Contenido de la política de privacidad...",
     version: "2.1",
     estado: "VIGENTE",
-    creado_por: "Maria Gonzalez",
-    aprobado_por: "Carlos Mendez",
+    creado_por: "María González",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2025-11-15",
     fecha_aprobacion: "2025-12-01",
     vigente_hasta: "2026-12-01",
     historial: [
-      { version: "1.0", fecha: "2025-06-01", autor: "Maria Gonzalez", cambios: "Version inicial" },
-      { version: "2.0", fecha: "2025-09-15", autor: "Maria Gonzalez", cambios: "Adecuacion a Ley 21.719" },
-      { version: "2.1", fecha: "2025-11-15", autor: "Maria Gonzalez", cambios: "Ajustes menores y revision legal" },
+      { version: "1.0", fecha: "2025-06-01", autor: "María González", cambios: "Versión inicial" },
+      { version: "2.0", fecha: "2025-09-15", autor: "María González", cambios: "Adecuación a Ley 21.719" },
+      { version: "2.1", fecha: "2025-11-15", autor: "María González", cambios: "Ajustes menores y revisión legal" },
     ],
   },
   {
@@ -84,13 +84,13 @@ const mockDocumentos: Documento[] = [
     contenido: "Contenido de la politica de proteccion de datos...",
     version: "1.2",
     estado: "APROBADO",
-    creado_por: "Maria Gonzalez",
-    aprobado_por: "Carlos Mendez",
+    creado_por: "María González",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2025-10-20",
     fecha_aprobacion: "2026-01-10",
     vigente_hasta: null,
     historial: [
-      { version: "1.0", fecha: "2025-10-20", autor: "Maria Gonzalez", cambios: "Version inicial" },
+      { version: "1.0", fecha: "2025-10-20", autor: "María González", cambios: "Versión inicial" },
       { version: "1.2", fecha: "2025-12-05", autor: "Ana Torres", cambios: "Incorporacion de categorias especiales" },
     ],
   },
@@ -108,7 +108,7 @@ const mockDocumentos: Documento[] = [
     fecha_aprobacion: null,
     vigente_hasta: null,
     historial: [
-      { version: "1.0", fecha: "2026-01-20", autor: "Ana Torres", cambios: "Version inicial para revision" },
+      { version: "1.0", fecha: "2026-01-20", autor: "Ana Torres", cambios: "Versión inicial para revision" },
     ],
   },
   {
@@ -120,12 +120,12 @@ const mockDocumentos: Documento[] = [
     version: "1.1",
     estado: "VIGENTE",
     creado_por: "Pedro Ramirez",
-    aprobado_por: "Carlos Mendez",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2025-12-01",
     fecha_aprobacion: "2026-01-15",
     vigente_hasta: "2027-01-15",
     historial: [
-      { version: "1.0", fecha: "2025-12-01", autor: "Pedro Ramirez", cambios: "Version inicial" },
+      { version: "1.0", fecha: "2025-12-01", autor: "Pedro Ramirez", cambios: "Versión inicial" },
       { version: "1.1", fecha: "2025-12-20", autor: "Pedro Ramirez", cambios: "Tiempos de notificacion ajustados" },
     ],
   },
@@ -157,7 +157,7 @@ const mockDocumentos: Documento[] = [
     version: "3.0",
     estado: "VIGENTE",
     creado_por: "Pedro Ramirez",
-    aprobado_por: "Carlos Mendez",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2025-08-01",
     fecha_aprobacion: "2025-09-01",
     vigente_hasta: "2026-09-01",
@@ -176,7 +176,7 @@ const mockDocumentos: Documento[] = [
     version: "1.0",
     estado: "APROBADO",
     creado_por: "Lucia Herrera",
-    aprobado_por: "Carlos Mendez",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2026-03-05",
     fecha_aprobacion: "2026-03-10",
     vigente_hasta: null,
@@ -210,13 +210,13 @@ const mockDocumentos: Documento[] = [
     contenido: "Contenido del procedimiento EIPD...",
     version: "1.0",
     estado: "EN_REVISION",
-    creado_por: "Maria Gonzalez",
+    creado_por: "María González",
     aprobado_por: null,
     fecha_creacion: "2026-02-15",
     fecha_aprobacion: null,
     vigente_hasta: null,
     historial: [
-      { version: "1.0", fecha: "2026-02-15", autor: "Maria Gonzalez", cambios: "Version para revision del comite" },
+      { version: "1.0", fecha: "2026-02-15", autor: "María González", cambios: "Version para revision del comite" },
     ],
   },
   {
@@ -228,7 +228,7 @@ const mockDocumentos: Documento[] = [
     version: "2.0",
     estado: "VIGENTE",
     creado_por: "Pedro Ramirez",
-    aprobado_por: "Carlos Mendez",
+    aprobado_por: "Carlos Méndez",
     fecha_creacion: "2025-09-10",
     fecha_aprobacion: "2025-10-01",
     vigente_hasta: "2026-10-01",
@@ -333,7 +333,7 @@ export default function DocumentosPage() {
       fecha_aprobacion: null,
       vigente_hasta: null,
       historial: [
-        { version: formVersion, fecha: new Date().toISOString().split("T")[0], autor: "Usuario Actual", cambios: "Version inicial" },
+        { version: formVersion, fecha: new Date().toISOString().split("T")[0], autor: "Usuario Actual", cambios: "Versión inicial" },
       ],
     }
     setDocumentos(prev => [nuevo, ...prev])
@@ -353,7 +353,7 @@ export default function DocumentosPage() {
         return {
           ...d,
           estado: nuevoEstado,
-          aprobado_por: nuevoEstado === "APROBADO" || nuevoEstado === "VIGENTE" ? "Carlos Mendez" : d.aprobado_por,
+          aprobado_por: nuevoEstado === "APROBADO" || nuevoEstado === "VIGENTE" ? "Carlos Méndez" : d.aprobado_por,
           fecha_aprobacion: nuevoEstado === "APROBADO" ? new Date().toISOString().split("T")[0] : d.fecha_aprobacion,
         }
       })
@@ -591,7 +591,7 @@ export default function DocumentosPage() {
                         setDocumentoDetalle({
                           ...documentoDetalle,
                           estado: nuevoEstado,
-                          aprobado_por: nuevoEstado === "APROBADO" || nuevoEstado === "VIGENTE" ? "Carlos Mendez" : documentoDetalle.aprobado_por,
+                          aprobado_por: nuevoEstado === "APROBADO" || nuevoEstado === "VIGENTE" ? "Carlos Méndez" : documentoDetalle.aprobado_por,
                         })
                       }
                     }}
