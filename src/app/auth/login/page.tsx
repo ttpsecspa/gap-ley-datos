@@ -12,8 +12,13 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState("")
-  const { signIn, loading } = useAuthStore()
+  const { signIn, loading, demoMode } = useAuthStore()
   const router = useRouter()
+
+  // En modo demo, redirigir directamente al dashboard
+  const handleDemo = () => {
+    router.push("/dashboard")
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -82,6 +87,19 @@ export default function LoginPage() {
             <h2 className="text-2xl font-bold text-gray-900">Iniciar sesion</h2>
             <p className="text-sm text-gray-500 mt-1">Ingresa tus credenciales para acceder al sistema</p>
           </div>
+
+          {demoMode && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <p className="text-sm font-medium text-blue-800">Modo Demo Activo</p>
+              <p className="text-xs text-blue-600 mt-1">No se requiere Supabase. Haz clic para explorar el sistema con datos de ejemplo.</p>
+              <button
+                onClick={handleDemo}
+                className="mt-3 w-full bg-blue-600 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Entrar al Demo
+              </button>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {error && (
