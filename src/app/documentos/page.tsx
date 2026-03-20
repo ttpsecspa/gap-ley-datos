@@ -126,34 +126,34 @@ const mockDocumentos: Documento[] = [
     vigente_hasta: "2027-01-15",
     historial: [
       { version: "1.0", fecha: "2025-12-01", autor: "Pedro Ramírez", cambios: "Versión inicial" },
-      { version: "1.1", fecha: "2025-12-20", autor: "Pedro Ramírez", cambios: "Tiempos de notificacion ajustados" },
+      { version: "1.1", fecha: "2025-12-20", autor: "Pedro Ramírez", cambios: "Tiempos de notificación ajustados" },
     ],
   },
   {
     id: "5",
     tipo: "PROCEDIMIENTO",
     titulo: "Procedimiento de Consentimiento",
-    descripcion: "Mecanismos y flujos para la obtencion y gestion del consentimiento informado",
+    descripcion: "Mecanismos y flujos para la obtención y gestión del consentimiento informado",
     contenido: "Contenido del procedimiento de consentimiento...",
     version: "0.3",
     estado: "BORRADOR",
-    creado_por: "Lucia Herrera",
+    creado_por: "Lucía Herrera",
     aprobado_por: null,
     fecha_creacion: "2026-02-10",
     fecha_aprobacion: null,
     vigente_hasta: null,
     historial: [
-      { version: "0.1", fecha: "2026-02-10", autor: "Lucia Herrera", cambios: "Borrador inicial" },
-      { version: "0.2", fecha: "2026-02-20", autor: "Lucia Herrera", cambios: "Incorporacion de formularios" },
-      { version: "0.3", fecha: "2026-03-01", autor: "Lucia Herrera", cambios: "Revision de flujos digitales" },
+      { version: "0.1", fecha: "2026-02-10", autor: "Lucía Herrera", cambios: "Borrador inicial" },
+      { version: "0.2", fecha: "2026-02-20", autor: "Lucía Herrera", cambios: "Incorporación de formularios" },
+      { version: "0.3", fecha: "2026-03-01", autor: "Lucía Herrera", cambios: "Revisión de flujos digitales" },
     ],
   },
   {
     id: "6",
     tipo: "CATALOGO",
-    titulo: "Catalogo de Bases de Datos",
-    descripcion: "Inventario de todas las bases de datos personales de la organizacion",
-    contenido: "Contenido del catalogo de bases de datos...",
+    titulo: "Catálogo de Bases de Datos",
+    descripcion: "Inventario de todas las bases de datos personales de la organización",
+    contenido: "Contenido del catálogo de bases de datos...",
     version: "3.0",
     estado: "VIGENTE",
     creado_por: "Pedro Ramírez",
@@ -164,32 +164,32 @@ const mockDocumentos: Documento[] = [
     historial: [
       { version: "1.0", fecha: "2025-08-01", autor: "Pedro Ramírez", cambios: "Inventario inicial" },
       { version: "2.0", fecha: "2025-10-01", autor: "Pedro Ramírez", cambios: "Nuevas bases incorporadas" },
-      { version: "3.0", fecha: "2025-12-15", autor: "Pedro Ramírez", cambios: "Actualizacion completa" },
+      { version: "3.0", fecha: "2025-12-15", autor: "Pedro Ramírez", cambios: "Actualización completa" },
     ],
   },
   {
     id: "7",
     tipo: "ACTA",
-    titulo: "Acta Comite de Datos",
-    descripcion: "Acta de la sesion ordinaria del Comite de Proteccion de Datos - Marzo 2026",
-    contenido: "Contenido del acta del comite...",
+    titulo: "Acta Comité de Datos",
+    descripcion: "Acta de la sesión ordinaria del Comité de Protección de Datos - Marzo 2026",
+    contenido: "Contenido del acta del comité...",
     version: "1.0",
     estado: "APROBADO",
-    creado_por: "Lucia Herrera",
+    creado_por: "Lucía Herrera",
     aprobado_por: "Carlos Méndez",
     fecha_creacion: "2026-03-05",
     fecha_aprobacion: "2026-03-10",
     vigente_hasta: null,
     historial: [
-      { version: "1.0", fecha: "2026-03-05", autor: "Lucia Herrera", cambios: "Acta sesion marzo 2026" },
+      { version: "1.0", fecha: "2026-03-05", autor: "Lucía Herrera", cambios: "Acta sesión marzo 2026" },
     ],
   },
   {
     id: "8",
     tipo: "POLITICA",
-    titulo: "Politica de Transferencia Internacional",
-    descripcion: "Normas para transferencia internacional de datos personales segun Art. 27-28",
-    contenido: "Contenido de la politica de transferencia internacional...",
+    titulo: "Política de Transferencia Internacional",
+    descripcion: "Normas para transferencia internacional de datos personales según Art. 27-28",
+    contenido: "Contenido de la política de transferencia internacional...",
     version: "0.2",
     estado: "BORRADOR",
     creado_por: "Ana Torres",
@@ -199,14 +199,14 @@ const mockDocumentos: Documento[] = [
     vigente_hasta: null,
     historial: [
       { version: "0.1", fecha: "2026-03-01", autor: "Ana Torres", cambios: "Borrador inicial" },
-      { version: "0.2", fecha: "2026-03-12", autor: "Ana Torres", cambios: "Clausulas tipo incorporadas" },
+      { version: "0.2", fecha: "2026-03-12", autor: "Ana Torres", cambios: "Cláusulas tipo incorporadas" },
     ],
   },
   {
     id: "9",
     tipo: "PROCEDIMIENTO",
-    titulo: "Procedimiento de Evaluacion de Impacto",
-    descripcion: "Metodologia para realizar Evaluaciones de Impacto en Proteccion de Datos (EIPD)",
+    titulo: "Procedimiento de Evaluación de Impacto",
+    descripcion: "Metodología para realizar Evaluaciones de Impacto en Protección de Datos (EIPD)",
     contenido: "Contenido del procedimiento EIPD...",
     version: "1.0",
     estado: "EN_REVISION",
@@ -216,7 +216,7 @@ const mockDocumentos: Documento[] = [
     fecha_aprobacion: null,
     vigente_hasta: null,
     historial: [
-      { version: "1.0", fecha: "2026-02-15", autor: "María González", cambios: "Version para revision del comite" },
+      { version: "1.0", fecha: "2026-02-15", autor: "María González", cambios: "Versión para revisión del comité" },
     ],
   },
   {
@@ -234,15 +234,15 @@ const mockDocumentos: Documento[] = [
     vigente_hasta: "2026-10-01",
     historial: [
       { version: "1.0", fecha: "2025-09-10", autor: "Pedro Ramírez", cambios: "Registro inicial" },
-      { version: "2.0", fecha: "2025-11-20", autor: "Pedro Ramírez", cambios: "Actualizacion semestral" },
+      { version: "2.0", fecha: "2025-11-20", autor: "Pedro Ramírez", cambios: "Actualización semestral" },
     ],
   },
 ]
 
 const TIPOS_DOCUMENTO: { value: TipoDocumento | "TODOS"; label: string }[] = [
   { value: "TODOS", label: "Todos" },
-  { value: "CATALOGO", label: "Catalogo" },
-  { value: "POLITICA", label: "Politica" },
+  { value: "CATALOGO", label: "Catálogo" },
+  { value: "POLITICA", label: "Política" },
   { value: "PROTOCOLO", label: "Protocolo" },
   { value: "PROCEDIMIENTO", label: "Procedimiento" },
   { value: "ACTA", label: "Acta" },
@@ -253,15 +253,15 @@ const ESTADOS_DOCUMENTO: EstadoDocumento[] = ["BORRADOR", "EN_REVISION", "APROBA
 
 const estadoLabel: Record<EstadoDocumento, string> = {
   BORRADOR: "Borrador",
-  EN_REVISION: "En revision",
+  EN_REVISION: "En revisión",
   APROBADO: "Aprobado",
   VIGENTE: "Vigente",
   OBSOLETO: "Obsoleto",
 }
 
 const tipoLabel: Record<TipoDocumento, string> = {
-  CATALOGO: "Catalogo",
-  POLITICA: "Politica",
+  CATALOGO: "Catálogo",
+  POLITICA: "Política",
   PROTOCOLO: "Protocolo",
   PROCEDIMIENTO: "Procedimiento",
   ACTA: "Acta",
@@ -275,7 +275,7 @@ const siguienteEstado: Partial<Record<EstadoDocumento, EstadoDocumento>> = {
 }
 
 const accionEstado: Partial<Record<EstadoDocumento, string>> = {
-  BORRADOR: "Enviar a revision",
+  BORRADOR: "Enviar a revisión",
   EN_REVISION: "Aprobar",
   APROBADO: "Publicar como vigente",
 }
@@ -369,7 +369,7 @@ export default function DocumentosPage() {
     <AppShell>
       <Header
         title="Documentos"
-        subtitle="Gestion de documentos de cumplimiento - Ley 21.719"
+        subtitle="Gestión de documentos de cumplimiento - Ley 21.719"
         actions={
           <Button onClick={() => setMostrarFormulario(true)} className="flex items-center gap-2">
             <Plus className="h-4 w-4" />
@@ -393,7 +393,7 @@ export default function DocumentosPage() {
             iconColor="text-green-600 bg-green-50"
           />
           <StatCard
-            title="En Revision"
+            title="En Revisión"
             value={enRevision}
             icon={Clock}
             iconColor="text-blue-600 bg-blue-50"
@@ -472,7 +472,7 @@ export default function DocumentosPage() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Version</label>
+                  <label className="text-sm font-medium text-gray-700">Versión</label>
                   <Input
                     value={formVersion}
                     onChange={(e) => setFormVersion(e.target.value)}
@@ -480,19 +480,19 @@ export default function DocumentosPage() {
                   />
                 </div>
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Titulo</label>
+                  <label className="text-sm font-medium text-gray-700">Título</label>
                   <Input
                     value={formTitulo}
                     onChange={(e) => setFormTitulo(e.target.value)}
-                    placeholder="Titulo del documento"
+                    placeholder="Título del documento"
                   />
                 </div>
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Descripcion</label>
+                  <label className="text-sm font-medium text-gray-700">Descripción</label>
                   <Input
                     value={formDescripcion}
                     onChange={(e) => setFormDescripcion(e.target.value)}
-                    placeholder="Descripcion breve del documento"
+                    placeholder="Descripción breve del documento"
                   />
                 </div>
                 <div className="md:col-span-2 space-y-2">
@@ -500,7 +500,7 @@ export default function DocumentosPage() {
                   <Textarea
                     value={formContenido}
                     onChange={(e) => setFormContenido(e.target.value)}
-                    placeholder="Contenido del documento (editor de texto enriquecido proximamente)..."
+                    placeholder="Contenido del documento (editor de texto enriquecido próximamente)..."
                     rows={6}
                   />
                 </div>
