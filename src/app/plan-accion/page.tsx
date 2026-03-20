@@ -66,23 +66,23 @@ interface ActionPlan {
 const mockPlans: ActionPlan[] = [
   {
     id: "plan-1",
-    name: "Plan de Remediacion - Evaluacion Inicial",
-    description: "Plan de accion derivado de la primera evaluacion GAP de cumplimiento Ley 21.719",
+    name: "Plan de Remediación - Evaluación Inicial",
+    description: "Plan de acción derivado de la primera evaluación GAP de cumplimiento Ley 21.719",
     status: "ACTIVO",
     startDate: "2026-01-15",
     endDate: "2026-09-30",
     completionPercentage: 35,
-    createdBy: "Maria Gonzalez",
+    createdBy: "María González",
   },
   {
     id: "plan-2",
-    name: "Plan Correctivo - Auditoria DPO",
-    description: "Acciones correctivas identificadas durante la auditoria del Delegado de Proteccion de Datos",
+    name: "Plan Correctivo - Auditoría DPO",
+    description: "Acciones correctivas identificadas durante la auditoría del Delegado de Protección de Datos",
     status: "BORRADOR",
     startDate: "2026-03-01",
     endDate: "2026-12-15",
     completionPercentage: 10,
-    createdBy: "Carlos Mendez",
+    createdBy: "Carlos Méndez",
   },
 ]
 
@@ -90,8 +90,8 @@ const mockActions: ActionItem[] = [
   {
     id: "act-1",
     planId: "plan-1",
-    title: "Implementar politica de consentimiento informado",
-    description: "Desarrollar e implementar procedimiento de obtencion de consentimiento conforme Art. 12-13",
+    title: "Implementar política de consentimiento informado",
+    description: "Desarrollar e implementar procedimiento de obtención de consentimiento conforme Art. 12-13",
     priority: "CRITICA",
     status: "EN_PROGRESO",
     responsible: "Ana Torres",
@@ -104,7 +104,7 @@ const mockActions: ActionItem[] = [
     id: "act-2",
     planId: "plan-1",
     title: "Crear procedimiento de derechos ARCO-POB",
-    description: "Procedimiento para atender solicitudes de acceso, rectificacion, cancelacion, oposicion, portabilidad y bloqueo",
+    description: "Procedimiento para atender solicitudes de acceso, rectificación, cancelación, oposición, portabilidad y bloqueo",
     priority: "CRITICA",
     status: "PENDIENTE",
     responsible: "Luis Herrera",
@@ -116,7 +116,7 @@ const mockActions: ActionItem[] = [
   {
     id: "act-3",
     planId: "plan-1",
-    title: "Registrar bases de datos personales en catalogo",
+    title: "Registrar bases de datos personales en catálogo",
     description: "Inventariar y registrar todas las bases de datos que contienen datos personales",
     priority: "ALTA",
     status: "EN_PROGRESO",
@@ -133,7 +133,7 @@ const mockActions: ActionItem[] = [
     description: "Mapear y evaluar todas las transferencias internacionales conforme Art. 27-28",
     priority: "ALTA",
     status: "VENCIDA",
-    responsible: "Maria Gonzalez",
+    responsible: "María González",
     department: "Compliance",
     dueDate: "2026-03-15",
     startDate: "2026-01-15",
@@ -142,11 +142,11 @@ const mockActions: ActionItem[] = [
   {
     id: "act-5",
     planId: "plan-1",
-    title: "Implementar medidas de seguridad tecnicas",
-    description: "Cifrado, control de acceso y medidas tecnicas de proteccion de datos Art. 14 quinquies",
+    title: "Implementar medidas de seguridad técnicas",
+    description: "Cifrado, control de acceso y medidas técnicas de protección de datos Art. 14 quinquies",
     priority: "ALTA",
     status: "PENDIENTE",
-    responsible: "Jorge Diaz",
+    responsible: "Jorge Díaz",
     department: "TI",
     dueDate: "2026-06-30",
     startDate: "2026-04-01",
@@ -155,8 +155,8 @@ const mockActions: ActionItem[] = [
   {
     id: "act-6",
     planId: "plan-1",
-    title: "Capacitar al personal en proteccion de datos",
-    description: "Programa de capacitacion para todos los colaboradores sobre la nueva ley",
+    title: "Capacitar al personal en protección de datos",
+    description: "Programa de capacitación para todos los colaboradores sobre la nueva ley",
     priority: "MEDIA",
     status: "COMPLETADA",
     responsible: "Claudia Reyes",
@@ -169,11 +169,11 @@ const mockActions: ActionItem[] = [
     id: "act-7",
     planId: "plan-2",
     title: "Nombrar DPO formalmente ante la Agencia",
-    description: "Designar y registrar formalmente al Delegado de Proteccion de Datos",
+    description: "Designar y registrar formalmente al Delegado de Protección de Datos",
     priority: "CRITICA",
     status: "EN_PROGRESO",
-    responsible: "Carlos Mendez",
-    department: "Direccion",
+    responsible: "Carlos Méndez",
+    department: "Dirección",
     dueDate: "2026-04-30",
     startDate: "2026-03-01",
     completionPercentage: 50,
@@ -181,11 +181,11 @@ const mockActions: ActionItem[] = [
   {
     id: "act-8",
     planId: "plan-2",
-    title: "Elaborar protocolo de notificacion de brechas",
-    description: "Crear procedimiento de notificacion de brechas de seguridad dentro de 72 horas",
+    title: "Elaborar protocolo de notificación de brechas",
+    description: "Crear procedimiento de notificación de brechas de seguridad dentro de 72 horas",
     priority: "ALTA",
     status: "PENDIENTE",
-    responsible: "Jorge Diaz",
+    responsible: "Jorge Díaz",
     department: "TI",
     dueDate: "2026-05-15",
     startDate: "2026-04-01",
@@ -194,8 +194,8 @@ const mockActions: ActionItem[] = [
   {
     id: "act-9",
     planId: "plan-2",
-    title: "Realizar Evaluacion de Impacto (EIPD)",
-    description: "Evaluacion de impacto en proteccion de datos para tratamientos de alto riesgo",
+    title: "Realizar Evaluación de Impacto (EIPD)",
+    description: "Evaluación de impacto en protección de datos para tratamientos de alto riesgo",
     priority: "MEDIA",
     status: "PENDIENTE",
     responsible: "Ana Torres",
@@ -208,7 +208,7 @@ const mockActions: ActionItem[] = [
     id: "act-10",
     planId: "plan-2",
     title: "Actualizar contratos con encargados de tratamiento",
-    description: "Revisar y actualizar clausulas de proteccion de datos en contratos con proveedores",
+    description: "Revisar y actualizar cláusulas de protección de datos en contratos con proveedores",
     priority: "BAJA",
     status: "PENDIENTE",
     responsible: "Luis Herrera",
@@ -224,7 +224,7 @@ const mockActions: ActionItem[] = [
 const priorityOrder: Record<Priority, number> = { CRITICA: 0, ALTA: 1, MEDIA: 2, BAJA: 3 }
 
 const priorityLabel: Record<Priority, string> = {
-  CRITICA: "Critica",
+  CRITICA: "Crítica",
   ALTA: "Alta",
   MEDIA: "Media",
   BAJA: "Baja",
@@ -403,12 +403,12 @@ export default function PlanAccionPage() {
   return (
     <AppShell>
       <Header
-        title="Plan de Accion"
-        subtitle="Gestion de planes de remediacion - Ley 21.719"
+        title="Plan de Acción"
+        subtitle="Gestión de planes de remediación - Ley 21.719"
         actions={
           <Button onClick={openCreateModal} className="gap-2">
             <Plus className="h-4 w-4" />
-            Nueva Accion
+            Nueva Acción
           </Button>
         }
       />
@@ -475,7 +475,7 @@ export default function PlanAccionPage() {
                     onChange={(e) => setFilterPriority(e.target.value as Priority | "TODAS")}
                   >
                     <option value="TODAS">Todas las prioridades</option>
-                    <option value="CRITICA">Critica</option>
+                    <option value="CRITICA">Crítica</option>
                     <option value="ALTA">Alta</option>
                     <option value="MEDIA">Media</option>
                     <option value="BAJA">Baja</option>
@@ -512,7 +512,7 @@ export default function PlanAccionPage() {
                   <button
                     onClick={() => setViewMode("timeline")}
                     className={`p-1.5 ${viewMode === "timeline" ? "bg-blue-600 text-white" : "bg-white text-gray-500 hover:bg-gray-50"}`}
-                    title="Vista linea de tiempo"
+                    title="Vista línea de tiempo"
                   >
                     <BarChart3 className="h-4 w-4" />
                   </button>
@@ -533,7 +533,7 @@ export default function PlanAccionPage() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-gray-200">
-                      <th className="text-left py-3 px-3 font-medium text-gray-500">Accion</th>
+                      <th className="text-left py-3 px-3 font-medium text-gray-500">Acción</th>
                       <th className="text-left py-3 px-3 font-medium text-gray-500">Prioridad</th>
                       <th className="text-left py-3 px-3 font-medium text-gray-500">Estado</th>
                       <th className="text-left py-3 px-3 font-medium text-gray-500">Responsable</th>
@@ -729,7 +729,7 @@ export default function PlanAccionPage() {
           <div className="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <h2 className="text-lg font-semibold text-gray-900">
-                {editingAction ? "Editar Accion" : "Nueva Accion"}
+                {editingAction ? "Editar Acción" : "Nueva Acción"}
               </h2>
               <button onClick={closeModal} className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg">
                 <X className="h-5 w-5" />
@@ -739,21 +739,21 @@ export default function PlanAccionPage() {
             <div className="p-6 space-y-4">
               {/* Title */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Titulo *</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Título *</label>
                 <Input
                   value={formData.title}
                   onChange={(e) => setFormData((f) => ({ ...f, title: e.target.value }))}
-                  placeholder="Nombre de la accion"
+                  placeholder="Nombre de la acción"
                 />
               </div>
 
               {/* Description */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Descripcion</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                 <Textarea
                   value={formData.description}
                   onChange={(e) => setFormData((f) => ({ ...f, description: e.target.value }))}
-                  placeholder="Detalle de la accion a realizar"
+                  placeholder="Detalle de la acción a realizar"
                   rows={3}
                 />
               </div>
@@ -767,7 +767,7 @@ export default function PlanAccionPage() {
                     value={formData.priority}
                     onChange={(e) => setFormData((f) => ({ ...f, priority: e.target.value as Priority }))}
                   >
-                    <option value="CRITICA">Critica</option>
+                    <option value="CRITICA">Crítica</option>
                     <option value="ALTA">Alta</option>
                     <option value="MEDIA">Media</option>
                     <option value="BAJA">Baja</option>
@@ -851,7 +851,7 @@ export default function PlanAccionPage() {
                 Cancelar
               </Button>
               <Button onClick={saveAction} disabled={!formData.title.trim()}>
-                {editingAction ? "Guardar Cambios" : "Crear Accion"}
+                {editingAction ? "Guardar Cambios" : "Crear Acción"}
               </Button>
             </div>
           </div>

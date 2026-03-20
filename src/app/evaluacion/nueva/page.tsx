@@ -54,11 +54,11 @@ interface Category {
 }
 
 const complianceLevels: { value: ComplianceLevel; label: string; description: string }[] = [
-  { value: "", label: "Sin evaluar", description: "Pendiente de evaluacion" },
+  { value: "", label: "Sin evaluar", description: "Pendiente de evaluación" },
   { value: "NO_CUMPLE", label: "No Cumple", description: "No se cumple con el requisito" },
   { value: "PARCIAL", label: "Parcial", description: "Cumplimiento parcial del requisito" },
   { value: "CUMPLE", label: "Cumple", description: "Cumplimiento total del requisito" },
-  { value: "NO_APLICA", label: "No Aplica", description: "El requisito no aplica a la organizacion" },
+  { value: "NO_APLICA", label: "No Aplica", description: "El requisito no aplica a la organización" },
 ]
 
 const initialCategories: Category[] = [
@@ -70,10 +70,10 @@ const initialCategories: Category[] = [
     icon: Scale,
     description: "Principios fundamentales que rigen el tratamiento de datos personales",
     questions: [
-      { id: "p1", text: "Se cuenta con una base de licitud definida para cada tratamiento de datos personales realizado por la organizacion?", article: "Art. 3", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "p2", text: "Los datos personales se recopilan y tratan exclusivamente para finalidades especificas, explicitas y licitas previamente informadas al titular?", article: "Art. 3 b)", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "p1", text: "Se cuenta con una base de licitud definida para cada tratamiento de datos personales realizado por la organización?", article: "Art. 3", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "p2", text: "Los datos personales se recopilan y tratan exclusivamente para finalidades específicas, explícitas y lícitas previamente informadas al titular?", article: "Art. 3 b)", weight: 3, complianceLevel: "", evidence: "", files: [] },
       { id: "p3", text: "Se aplica el principio de proporcionalidad, tratando solo los datos estrictamente necesarios para la finalidad declarada?", article: "Art. 3 c)", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "p4", text: "Existen procedimientos para asegurar la calidad, exactitud y actualizacion de los datos personales tratados?", article: "Art. 3 d)", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "p4", text: "Existen procedimientos para asegurar la calidad, exactitud y actualización de los datos personales tratados?", article: "Art. 3 d)", weight: 2, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -82,12 +82,12 @@ const initialCategories: Category[] = [
     shortName: "Derechos ARCO+",
     articles: "Art. 5-11",
     icon: Users,
-    description: "Derechos de acceso, rectificacion, supresion, oposicion, portabilidad y bloqueo",
+    description: "Derechos de acceso, rectificación, supresión, oposición, portabilidad y bloqueo",
     questions: [
       { id: "d1", text: "Existe un procedimiento formal para que los titulares puedan ejercer su derecho de acceso a sus datos personales?", article: "Art. 5", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "d2", text: "Se cuenta con un mecanismo para atender solicitudes de rectificacion de datos inexactos o incompletos?", article: "Art. 6", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "d3", text: "Se ha implementado un procedimiento para la supresion de datos cuando el titular lo solicite o cuando ya no sean necesarios?", article: "Art. 7", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "d4", text: "Existe un mecanismo para que los titulares ejerzan su derecho de oposicion al tratamiento y su derecho a la portabilidad de datos?", article: "Art. 8-9", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "d2", text: "Se cuenta con un mecanismo para atender solicitudes de rectificación de datos inexactos o incompletos?", article: "Art. 6", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "d3", text: "Se ha implementado un procedimiento para la supresión de datos cuando el titular lo solicite o cuando ya no sean necesarios?", article: "Art. 7", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "d4", text: "Existe un mecanismo para que los titulares ejerzan su derecho de oposición al tratamiento y su derecho a la portabilidad de datos?", article: "Art. 8-9", weight: 2, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -96,11 +96,11 @@ const initialCategories: Category[] = [
     shortName: "Consentimiento",
     articles: "Art. 12-13",
     icon: HandshakeIcon,
-    description: "Requisitos de consentimiento libre, informado, previo, especifico y revocable",
+    description: "Requisitos de consentimiento libre, informado, previo, específico y revocable",
     questions: [
       { id: "c1", text: "El consentimiento se obtiene de forma libre, sin condicionamientos indebidos para acceder a bienes o servicios?", article: "Art. 12", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "c2", text: "Se proporciona informacion clara y comprensible al titular antes de obtener su consentimiento (consentimiento informado)?", article: "Art. 12", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "c3", text: "El consentimiento se obtiene de manera previa al inicio del tratamiento y para finalidades especificas y determinadas?", article: "Art. 12", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "c2", text: "Se proporciona información clara y comprensible al titular antes de obtener su consentimiento (consentimiento informado)?", article: "Art. 12", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "c3", text: "El consentimiento se obtiene de manera previa al inicio del tratamiento y para finalidades específicas y determinadas?", article: "Art. 12", weight: 3, complianceLevel: "", evidence: "", files: [] },
       { id: "c4", text: "Se ha implementado un mecanismo sencillo para que el titular pueda revocar su consentimiento en cualquier momento?", article: "Art. 13", weight: 2, complianceLevel: "", evidence: "", files: [] },
     ],
   },
@@ -110,12 +110,12 @@ const initialCategories: Category[] = [
     shortName: "Obligaciones",
     articles: "Art. 14",
     icon: Building2,
-    description: "Registro de actividades, medidas de seguridad, DPO y modelo de prevencion",
+    description: "Registro de actividades, medidas de seguridad, DPO y modelo de prevención",
     questions: [
-      { id: "o1", text: "Se mantiene un registro actualizado de las actividades de tratamiento de datos personales realizadas por la organizacion?", article: "Art. 14", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "o2", text: "Se han implementado medidas de seguridad tecnicas y organizativas apropiadas para proteger los datos personales?", article: "Art. 14 bis", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "o3", text: "Se ha designado un Delegado de Proteccion de Datos (DPO) con las competencias y recursos necesarios?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "o4", text: "Se ha adoptado un modelo de prevencion de infracciones conforme a los requisitos de la ley?", article: "Art. 14 quater", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "o1", text: "Se mantiene un registro actualizado de las actividades de tratamiento de datos personales realizadas por la organización?", article: "Art. 14", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "o2", text: "Se han implementado medidas de seguridad técnicas y organizativas apropiadas para proteger los datos personales?", article: "Art. 14 bis", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "o3", text: "Se ha designado un Delegado de Protección de Datos (DPO) con las competencias y recursos necesarios?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "o4", text: "Se ha adoptado un modelo de prevención de infracciones conforme a los requisitos de la ley?", article: "Art. 14 quater", weight: 2, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -124,11 +124,11 @@ const initialCategories: Category[] = [
     shortName: "Transf. Internacional",
     articles: "Art. 27-28",
     icon: Globe,
-    description: "Transferencias a paises con nivel adecuado, clausulas contractuales y consentimiento",
+    description: "Transferencias a países con nivel adecuado, cláusulas contractuales y consentimiento",
     questions: [
-      { id: "t1", text: "Se ha verificado que los paises destinatarios de transferencias internacionales cuenten con un nivel adecuado de proteccion de datos?", article: "Art. 27", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "t2", text: "En ausencia de nivel adecuado, se utilizan clausulas contractuales tipo u otros mecanismos aprobados para la transferencia?", article: "Art. 27 bis", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "t3", text: "Se obtiene consentimiento expreso e informado del titular cuando la transferencia internacional no cuenta con otras garantias?", article: "Art. 28", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "t1", text: "Se ha verificado que los países destinatarios de transferencias internacionales cuenten con un nivel adecuado de protección de datos?", article: "Art. 27", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "t2", text: "En ausencia de nivel adecuado, se utilizan cláusulas contractuales tipo u otros mecanismos aprobados para la transferencia?", article: "Art. 27 bis", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "t3", text: "Se obtiene consentimiento expreso e informado del titular cuando la transferencia internacional no cuenta con otras garantías?", article: "Art. 28", weight: 2, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -137,12 +137,12 @@ const initialCategories: Category[] = [
     shortName: "Seguridad",
     articles: "Art. 14 quinquies",
     icon: Shield,
-    description: "Medidas tecnicas y organizativas, evaluacion de riesgo y notificacion de brechas",
+    description: "Medidas técnicas y organizativas, evaluación de riesgo y notificación de brechas",
     questions: [
-      { id: "s1", text: "Se han implementado medidas tecnicas de seguridad (cifrado, control de acceso, respaldos) adecuadas al riesgo del tratamiento?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "s2", text: "Existen medidas organizativas de seguridad (politicas, procedimientos, capacitacion) documentadas y vigentes?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "s3", text: "Se realizan evaluaciones periodicas de riesgo sobre las actividades de tratamiento de datos personales?", article: "Art. 14 quinquies", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "s4", text: "Existe un procedimiento de notificacion de brechas de seguridad a la autoridad y a los titulares afectados dentro de los plazos legales?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "s1", text: "Se han implementado medidas técnicas de seguridad (cifrado, control de acceso, respaldos) adecuadas al riesgo del tratamiento?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "s2", text: "Existen medidas organizativas de seguridad (políticas, procedimientos, capacitación) documentadas y vigentes?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "s3", text: "Se realizan evaluaciones periódicas de riesgo sobre las actividades de tratamiento de datos personales?", article: "Art. 14 quinquies", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "s4", text: "Existe un procedimiento de notificación de brechas de seguridad a la autoridad y a los titulares afectados dentro de los plazos legales?", article: "Art. 14 quinquies", weight: 3, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -151,12 +151,12 @@ const initialCategories: Category[] = [
     shortName: "Datos Sensibles",
     articles: "Art. 16",
     icon: Fingerprint,
-    description: "Tratamiento de datos de salud, biometricos, menores de edad y consentimiento explicito",
+    description: "Tratamiento de datos de salud, biométricos, menores de edad y consentimiento explícito",
     questions: [
-      { id: "ds1", text: "Se obtiene consentimiento explicito del titular para el tratamiento de datos sensibles, salvo las excepciones legales aplicables?", article: "Art. 16", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "ds1", text: "Se obtiene consentimiento explícito del titular para el tratamiento de datos sensibles, salvo las excepciones legales aplicables?", article: "Art. 16", weight: 3, complianceLevel: "", evidence: "", files: [] },
       { id: "ds2", text: "Los datos de salud se tratan con medidas de seguridad reforzadas y solo por personal autorizado?", article: "Art. 16 bis", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "ds3", text: "El tratamiento de datos biometricos cuenta con consentimiento explicito y se limita a finalidades especificas justificadas?", article: "Art. 16 bis", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "ds4", text: "Se aplican medidas especiales de proteccion para el tratamiento de datos personales de menores de edad?", article: "Art. 16 ter", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "ds3", text: "El tratamiento de datos biométricos cuenta con consentimiento explícito y se limita a finalidades específicas justificadas?", article: "Art. 16 bis", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "ds4", text: "Se aplican medidas especiales de protección para el tratamiento de datos personales de menores de edad?", article: "Art. 16 ter", weight: 3, complianceLevel: "", evidence: "", files: [] },
     ],
   },
   {
@@ -165,12 +165,12 @@ const initialCategories: Category[] = [
     shortName: "DPO / Gobernanza",
     articles: "Art. 14 ter-quater",
     icon: UserCog,
-    description: "Nombramiento, funciones, independencia del DPO y modelo de prevencion de infracciones",
+    description: "Nombramiento, funciones, independencia del DPO y modelo de prevención de infracciones",
     questions: [
-      { id: "g1", text: "Se ha nombrado formalmente un Delegado de Proteccion de Datos con dedicacion y recursos suficientes?", article: "Art. 14 ter", weight: 3, complianceLevel: "", evidence: "", files: [] },
-      { id: "g2", text: "El DPO tiene definidas sus funciones de asesoria, supervision y coordinacion con la autoridad de proteccion de datos?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "g3", text: "Se garantiza la independencia del DPO, sin recibir instrucciones en el ejercicio de sus funciones de supervision?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
-      { id: "g4", text: "Se ha implementado un modelo de prevencion de infracciones con politicas, procedimientos y mecanismos de supervision documentados?", article: "Art. 14 quater", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "g1", text: "Se ha nombrado formalmente un Delegado de Protección de Datos con dedicación y recursos suficientes?", article: "Art. 14 ter", weight: 3, complianceLevel: "", evidence: "", files: [] },
+      { id: "g2", text: "El DPO tiene definidas sus funciones de asesoría, supervisión y coordinación con la autoridad de protección de datos?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "g3", text: "Se garantiza la independencia del DPO, sin recibir instrucciones en el ejercicio de sus funciones de supervisión?", article: "Art. 14 ter", weight: 2, complianceLevel: "", evidence: "", files: [] },
+      { id: "g4", text: "Se ha implementado un modelo de prevención de infracciones con políticas, procedimientos y mecanismos de supervisión documentados?", article: "Art. 14 quater", weight: 3, complianceLevel: "", evidence: "", files: [] },
     ],
   },
 ]
@@ -178,7 +178,7 @@ const initialCategories: Category[] = [
 export default function NuevaEvaluacionPage() {
   const [categories, setCategories] = useState<Category[]>(initialCategories)
   const [expandedCategory, setExpandedCategory] = useState<string | null>("principios")
-  const [assessmentName, setAssessmentName] = useState("Evaluacion GAP - " + new Date().toLocaleDateString("es-CL"))
+  const [assessmentName, setAssessmentName] = useState("Evaluación GAP - " + new Date().toLocaleDateString("es-CL"))
   const [saving, setSaving] = useState(false)
   const [savedMessage, setSavedMessage] = useState("")
 
@@ -279,7 +279,7 @@ export default function NuevaEvaluacionPage() {
     setSaving(true)
     setTimeout(() => {
       setSaving(false)
-      setSavedMessage("Evaluacion completada y guardada exitosamente")
+      setSavedMessage("Evaluación completada y guardada exitosamente")
       setTimeout(() => setSavedMessage(""), 3000)
     }, 800)
   }, [answeredQuestions, totalQuestions])
@@ -287,8 +287,8 @@ export default function NuevaEvaluacionPage() {
   return (
     <AppShell>
       <Header
-        title="Nueva Evaluacion GAP"
-        subtitle="Cuestionario de cumplimiento Ley 21.719 de Proteccion de Datos Personales"
+        title="Nueva Evaluación GAP"
+        subtitle="Cuestionario de cumplimiento Ley 21.719 de Protección de Datos Personales"
         actions={
           <div className="flex items-center gap-2">
             {savedMessage && (
@@ -302,7 +302,7 @@ export default function NuevaEvaluacionPage() {
             </Button>
             <Button variant="success" onClick={handleComplete} disabled={saving}>
               <CheckCircle2 className="h-4 w-4 mr-2" />
-              Completar Evaluacion
+              Completar Evaluación
             </Button>
           </div>
         }
@@ -321,7 +321,7 @@ export default function NuevaEvaluacionPage() {
             value={assessmentName}
             onChange={(e) => setAssessmentName(e.target.value)}
             className="max-w-md text-base font-semibold"
-            placeholder="Nombre de la evaluacion"
+            placeholder="Nombre de la evaluación"
           />
         </div>
 
@@ -363,7 +363,7 @@ export default function NuevaEvaluacionPage() {
               </div>
               <ProgressBar value={answeredQuestions} max={totalQuestions} />
               <div className="flex items-center gap-4 text-xs text-gray-500">
-                <span>{completedCategories} de {categories.length} categorias completas</span>
+                <span>{completedCategories} de {categories.length} categorías completas</span>
                 <span className="text-gray-300">|</span>
                 <span>Score se calcula en tiempo real</span>
               </div>
@@ -574,7 +574,7 @@ export default function NuevaEvaluacionPage() {
                               <AlertCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
                               <div className="text-xs text-red-700">
                                 <p className="font-medium">Hallazgo de no cumplimiento detectado</p>
-                                <p className="mt-0.5 opacity-80">Se generara un plan de accion correctivo al completar la evaluacion.</p>
+                                <p className="mt-0.5 opacity-80">Se generará un plan de acción correctivo al completar la evaluación.</p>
                               </div>
                             </div>
                           )}
@@ -607,7 +607,7 @@ export default function NuevaEvaluacionPage() {
               </Button>
               <Button variant="success" onClick={handleComplete} disabled={saving}>
                 <CheckCircle2 className="h-4 w-4 mr-2" />
-                Completar Evaluacion
+                Completar Evaluación
               </Button>
             </div>
           </div>

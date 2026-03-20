@@ -48,7 +48,7 @@ const statusLabels: Record<AssessmentStatus, string> = {
 }
 
 const riskLabels: Record<RiskLevel, string> = {
-  CRITICO: "Critico",
+  CRITICO: "Crítico",
   ALTO: "Alto",
   MEDIO: "Medio",
   BAJO: "Bajo",
@@ -57,8 +57,8 @@ const riskLabels: Record<RiskLevel, string> = {
 const mockAssessments: Assessment[] = [
   {
     id: "eval-001",
-    name: "Evaluacion Inicial Q1 2026",
-    description: "Primera evaluacion de cumplimiento Ley 21.719 para establecer linea base",
+    name: "Evaluación Inicial Q1 2026",
+    description: "Primera evaluación de cumplimiento Ley 21.719 para establecer línea base",
     createdAt: "2026-01-15",
     updatedAt: "2026-02-28",
     status: "COMPLETADA",
@@ -67,12 +67,12 @@ const mockAssessments: Assessment[] = [
     findingsCount: 23,
     categoriesCompleted: 8,
     totalCategories: 8,
-    createdBy: "Maria Gonzalez",
+    createdBy: "María González",
   },
   {
     id: "eval-002",
-    name: "Evaluacion de Seguimiento Q2 2026",
-    description: "Seguimiento trimestral de avance en implementacion de controles",
+    name: "Evaluación de Seguimiento Q2 2026",
+    description: "Seguimiento trimestral de avance en implementación de controles",
     createdAt: "2026-03-01",
     updatedAt: "2026-03-18",
     status: "EN_PROGRESO",
@@ -85,8 +85,8 @@ const mockAssessments: Assessment[] = [
   },
   {
     id: "eval-003",
-    name: "Pre-evaluacion Area Comercial",
-    description: "Evaluacion preliminar del area comercial antes de la revision completa",
+    name: "Pre-evaluación Área Comercial",
+    description: "Evaluación preliminar del área comercial antes de la revisión completa",
     createdAt: "2026-03-10",
     updatedAt: "2026-03-10",
     status: "BORRADOR",
@@ -142,7 +142,7 @@ export default function EvaluacionPage() {
           <Link href="/evaluacion/nueva">
             <Button>
               <Plus className="h-4 w-4 mr-2" />
-              Nueva Evaluacion
+              Nueva Evaluación
             </Button>
           </Link>
         }
@@ -166,7 +166,7 @@ export default function EvaluacionPage() {
             iconColor={averageScore >= 80 ? "text-green-600 bg-green-50" : averageScore >= 50 ? "text-yellow-600 bg-yellow-50" : "text-red-600 bg-red-50"}
           />
           <StatCard
-            title="Ultima Evaluacion"
+            title="Última Evaluación"
             value={lastAssessmentDate ? formatDate(lastAssessmentDate) : "Sin datos"}
             description="fecha de completado"
             icon={CalendarDays}
@@ -245,7 +245,7 @@ export default function EvaluacionPage() {
                           <span>Creada: {formatDate(assessment.createdAt)}</span>
                           <span>Actualizada: {formatDate(assessment.updatedAt)}</span>
                           <span>
-                            Categorias: {assessment.categoriesCompleted}/{assessment.totalCategories}
+                            Categorías: {assessment.categoriesCompleted}/{assessment.totalCategories}
                           </span>
                         </div>
                       </div>
@@ -304,9 +304,9 @@ export default function EvaluacionPage() {
                     {assessment.status !== "BORRADOR" && (
                       <div className="mt-4 pt-4 border-t border-gray-100">
                         <div className="flex items-center justify-between mb-1.5">
-                          <span className="text-xs text-gray-500">Progreso de evaluacion</span>
+                          <span className="text-xs text-gray-500">Progreso de evaluación</span>
                           <span className="text-xs font-medium text-gray-600">
-                            {assessment.categoriesCompleted}/{assessment.totalCategories} categorias
+                            {assessment.categoriesCompleted}/{assessment.totalCategories} categorías
                           </span>
                         </div>
                         <ProgressBar

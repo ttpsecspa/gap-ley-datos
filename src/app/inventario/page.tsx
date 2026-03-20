@@ -59,15 +59,15 @@ const mockData: DataInventoryItem[] = [
   {
     id: "1",
     data_name: "Datos de colaboradores",
-    data_description: "Informacion personal de empleados: nombre, RUT, direccion, telefono, email, cargo, remuneracion, datos previsionales y de salud (licencias medicas).",
+    data_description: "Información personal de empleados: nombre, RUT, dirección, teléfono, email, cargo, remuneración, datos previsionales y de salud (licencias médicas).",
     data_category: "SENSIBLE",
-    purpose: "Gestion de recursos humanos, pago de remuneraciones, cumplimiento de obligaciones laborales y previsionales",
+    purpose: "Gestión de recursos humanos, pago de remuneraciones, cumplimiento de obligaciones laborales y previsionales",
     legal_basis: "LEY",
-    legal_basis_detail: "Codigo del Trabajo, DL 3.500, Ley 16.744",
-    data_source: "Recopilacion directa al momento de la contratacion",
-    recipients: "AFP, Isapre/Fonasa, Mutual de Seguridad, SII, Direccion del Trabajo",
-    internal_responsible: "Maria Gonzalez - Jefa de RRHH",
-    retention_period: "5 anos posterior al termino de la relacion laboral",
+    legal_basis_detail: "Código del Trabajo, DL 3.500, Ley 16.744",
+    data_source: "Recopilación directa al momento de la contratación",
+    recipients: "AFP, Isapre/Fonasa, Mutual de Seguridad, SII, Dirección del Trabajo",
+    internal_responsible: "María González - Jefa de RRHH",
+    retention_period: "5 años posterior al término de la relación laboral",
     platform_system: "SAP SuccessFactors",
     storage_infrastructure: "Cloud - AWS Region sa-east-1 (Sao Paulo)",
     international_transfer: true,
@@ -75,7 +75,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "SAP SE, Amazon Web Services Inc.",
     access_areas: "RRHH, Finanzas, Gerencia General",
     risk_level: "ALTO",
-    notes: "Incluye datos de salud (licencias medicas) que son datos sensibles segun Art. 16 bis Ley 21.719. Requiere consentimiento explicito para datos de salud.",
+    notes: "Incluye datos de salud (licencias médicas) que son datos sensibles según Art. 16 bis Ley 21.719. Requiere consentimiento explícito para datos de salud.",
     department: "Recursos Humanos",
     created_at: "2026-01-15",
     updated_at: "2026-03-10",
@@ -83,39 +83,39 @@ const mockData: DataInventoryItem[] = [
   {
     id: "2",
     data_name: "Base de datos de clientes",
-    data_description: "Nombre, RUT, direccion, email, telefono, historial de compras y preferencias comerciales de clientes.",
+    data_description: "Nombre, RUT, dirección, email, teléfono, historial de compras y preferencias comerciales de clientes.",
     data_category: "PERSONAL",
-    purpose: "Ejecucion de contratos de venta, atencion post-venta, facturacion electronica",
+    purpose: "Ejecución de contratos de venta, atención post-venta, facturación electrónica",
     legal_basis: "CONTRATO",
-    legal_basis_detail: "Ejecucion de contrato de compraventa y cumplimiento tributario (DL 825)",
+    legal_basis_detail: "Ejecución de contrato de compraventa y cumplimiento tributario (DL 825)",
     data_source: "Formulario de registro en punto de venta y sitio web",
-    recipients: "SII (facturacion electronica), empresa de courier (despacho)",
+    recipients: "SII (facturación electrónica), empresa de courier (despacho)",
     internal_responsible: "Carlos Muñoz - Gerente Comercial",
-    retention_period: "6 anos desde la ultima transaccion (plazo tributario)",
+    retention_period: "6 años desde la última transacción (plazo tributario)",
     platform_system: "Salesforce CRM",
     storage_infrastructure: "Cloud - Salesforce (USA)",
     international_transfer: true,
     transfer_country: "Estados Unidos",
     transfer_entity: "Salesforce Inc.",
-    access_areas: "Ventas, Marketing, Atencion al Cliente, Finanzas",
+    access_areas: "Ventas, Marketing, Atención al Cliente, Finanzas",
     risk_level: "MEDIO",
-    notes: "Verificar clausulas contractuales tipo (CCT) con Salesforce para transferencia internacional segun Art. 27 Ley 21.719.",
+    notes: "Verificar cláusulas contractuales tipo (CCT) con Salesforce para transferencia internacional según Art. 27 Ley 21.719.",
     department: "Comercial",
     created_at: "2026-01-20",
     updated_at: "2026-03-05",
   },
   {
     id: "3",
-    data_name: "Registro de control de acceso biometrico",
-    data_description: "Huellas dactilares y registro fotografico facial para control de acceso a instalaciones.",
+    data_name: "Registro de control de acceso biométrico",
+    data_description: "Huellas dactilares y registro fotográfico facial para control de acceso a instalaciones.",
     data_category: "BIOMETRICO",
-    purpose: "Control de acceso fisico a instalaciones, registro de asistencia laboral",
+    purpose: "Control de acceso físico a instalaciones, registro de asistencia laboral",
     legal_basis: "CONSENTIMIENTO",
-    legal_basis_detail: "Consentimiento explicito del titular conforme Art. 16 bis Ley 21.719 para datos biometricos",
-    data_source: "Dispositivos biometricos en accesos principales",
+    legal_basis_detail: "Consentimiento explícito del titular conforme Art. 16 bis Ley 21.719 para datos biométricos",
+    data_source: "Dispositivos biométricos en accesos principales",
     recipients: "No se comparten con terceros",
     internal_responsible: "Pedro Soto - Jefe de Seguridad",
-    retention_period: "1 ano desde la captura, o hasta el termino de la relacion laboral",
+    retention_period: "1 año desde la captura, o hasta el término de la relación laboral",
     platform_system: "ZKTeco BioTime",
     storage_infrastructure: "Servidor on-premise en datacenter propio",
     international_transfer: false,
@@ -123,7 +123,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "",
     access_areas: "Seguridad, RRHH",
     risk_level: "CRITICO",
-    notes: "Datos biometricos requieren nivel de proteccion reforzado. Art. 16 bis exige consentimiento explicito e informado. Evaluar EIPD obligatoria.",
+    notes: "Datos biométricos requieren nivel de protección reforzado. Art. 16 bis exige consentimiento explícito e informado. Evaluar EIPD obligatoria.",
     department: "Seguridad",
     created_at: "2026-02-01",
     updated_at: "2026-03-18",
@@ -131,15 +131,15 @@ const mockData: DataInventoryItem[] = [
   {
     id: "4",
     data_name: "Registros de videovigilancia",
-    data_description: "Grabaciones de camaras de seguridad en areas comunes de oficinas y bodegas.",
+    data_description: "Grabaciones de cámaras de seguridad en áreas comunes de oficinas y bodegas.",
     data_category: "PERSONAL",
-    purpose: "Seguridad de las instalaciones y proteccion de activos",
+    purpose: "Seguridad de las instalaciones y protección de activos",
     legal_basis: "INTERES_LEGITIMO",
-    legal_basis_detail: "Interes legitimo del responsable en la seguridad de sus instalaciones (Art. 13 quater Ley 21.719)",
-    data_source: "Camaras CCTV instaladas en areas comunes",
-    recipients: "Fuerzas de orden publico (solo ante requerimiento judicial)",
+    legal_basis_detail: "Interés legítimo del responsable en la seguridad de sus instalaciones (Art. 13 quater Ley 21.719)",
+    data_source: "Cámaras CCTV instaladas en áreas comunes",
+    recipients: "Fuerzas de orden público (solo ante requerimiento judicial)",
     internal_responsible: "Pedro Soto - Jefe de Seguridad",
-    retention_period: "30 dias corridos, salvo incidentes en investigacion",
+    retention_period: "30 días corridos, salvo incidentes en investigación",
     platform_system: "Hikvision NVR",
     storage_infrastructure: "NVR on-premise en sala de servidores",
     international_transfer: false,
@@ -147,7 +147,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "",
     access_areas: "Seguridad",
     risk_level: "MEDIO",
-    notes: "Señaletica de aviso de videovigilancia instalada. Verificar cumplimiento de prueba de balance de interes legitimo.",
+    notes: "Señalética de aviso de videovigilancia instalada. Verificar cumplimiento de prueba de balance de interés legítimo.",
     department: "Seguridad",
     created_at: "2026-02-05",
     updated_at: "2026-02-28",
@@ -155,15 +155,15 @@ const mockData: DataInventoryItem[] = [
   {
     id: "5",
     data_name: "Datos de proveedores y contratistas",
-    data_description: "Razon social, RUT, representante legal, datos de contacto, informacion bancaria para pagos.",
+    data_description: "Razón social, RUT, representante legal, datos de contacto, información bancaria para pagos.",
     data_category: "PERSONAL",
-    purpose: "Gestion de contratos con proveedores, procesamiento de pagos, cumplimiento tributario",
+    purpose: "Gestión de contratos con proveedores, procesamiento de pagos, cumplimiento tributario",
     legal_basis: "CONTRATO",
-    legal_basis_detail: "Ejecucion de contratos de prestacion de servicios",
+    legal_basis_detail: "Ejecución de contratos de prestación de servicios",
     data_source: "Formulario de registro de proveedores",
     recipients: "SII, banco para transferencias",
     internal_responsible: "Ana Torres - Jefa de Adquisiciones",
-    retention_period: "6 anos desde el termino del contrato",
+    retention_period: "6 años desde el término del contrato",
     platform_system: "SAP Business One",
     storage_infrastructure: "Servidor on-premise",
     international_transfer: false,
@@ -171,7 +171,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "",
     access_areas: "Adquisiciones, Finanzas, Legal",
     risk_level: "BAJO",
-    notes: "Datos principalmente de personas juridicas. Para personas naturales (contratistas), aplicar proteccion completa.",
+    notes: "Datos principalmente de personas jurídicas. Para personas naturales (contratistas), aplicar protección completa.",
     department: "Adquisiciones",
     created_at: "2026-01-25",
     updated_at: "2026-02-20",
@@ -179,39 +179,39 @@ const mockData: DataInventoryItem[] = [
   {
     id: "6",
     data_name: "Expedientes medicos ocupacionales",
-    data_description: "Examenes pre-ocupacionales, periodicos y de egreso. Historial de enfermedades profesionales y accidentes laborales.",
+    data_description: "Exámenes pre-ocupacionales, periódicos y de egreso. Historial de enfermedades profesionales y accidentes laborales.",
     data_category: "SENSIBLE",
-    purpose: "Cumplimiento de obligaciones de salud y seguridad laboral, prevencion de riesgos",
+    purpose: "Cumplimiento de obligaciones de salud y seguridad laboral, prevención de riesgos",
     legal_basis: "LEY",
     legal_basis_detail: "Ley 16.744 sobre accidentes del trabajo, DS 594 sobre condiciones sanitarias",
-    data_source: "Mutual de Seguridad, examenes medicos contratados",
-    recipients: "Mutual de Seguridad, SEREMI de Salud (en caso de fiscalizacion)",
-    internal_responsible: "Lucia Fernandez - Prevencionista de Riesgos",
-    retention_period: "20 anos conforme normativa de salud ocupacional",
-    platform_system: "Sistema interno de prevencion de riesgos",
+    data_source: "Mutual de Seguridad, exámenes médicos contratados",
+    recipients: "Mutual de Seguridad, SEREMI de Salud (en caso de fiscalización)",
+    internal_responsible: "Lucía Fernández - Prevencionista de Riesgos",
+    retention_period: "20 años conforme normativa de salud ocupacional",
+    platform_system: "Sistema interno de prevención de riesgos",
     storage_infrastructure: "Servidor on-premise con cifrado",
     international_transfer: false,
     transfer_country: "",
     transfer_entity: "",
-    access_areas: "Prevencion de Riesgos, RRHH (acceso restringido)",
+    access_areas: "Prevención de Riesgos, RRHH (acceso restringido)",
     risk_level: "ALTO",
-    notes: "Datos de salud requieren medidas de seguridad reforzadas. Acceso restringido solo a personal autorizado de prevencion de riesgos.",
-    department: "Prevencion de Riesgos",
+    notes: "Datos de salud requieren medidas de seguridad reforzadas. Acceso restringido solo a personal autorizado de prevención de riesgos.",
+    department: "Prevención de Riesgos",
     created_at: "2026-02-10",
     updated_at: "2026-03-15",
   },
   {
     id: "7",
     data_name: "Datos de marketing y newsletter",
-    data_description: "Email, nombre, preferencias de comunicacion, historial de interacciones con campanas de email marketing.",
+    data_description: "Email, nombre, preferencias de comunicación, historial de interacciones con campañas de email marketing.",
     data_category: "PERSONAL",
-    purpose: "Envio de comunicaciones comerciales, campanas de marketing directo, fidelizacion",
+    purpose: "Envío de comunicaciones comerciales, campañas de marketing directo, fidelización",
     legal_basis: "CONSENTIMIENTO",
-    legal_basis_detail: "Consentimiento libre, informado, especifico e inequivoco del titular (Art. 12 Ley 21.719)",
-    data_source: "Formulario de suscripcion web, eventos presenciales",
+    legal_basis_detail: "Consentimiento libre, informado, específico e inequívoco del titular (Art. 12 Ley 21.719)",
+    data_source: "Formulario de suscripción web, eventos presenciales",
     recipients: "No se comparten con terceros",
     internal_responsible: "Javiera Rojas - Jefa de Marketing Digital",
-    retention_period: "Hasta revocacion del consentimiento",
+    retention_period: "Hasta revocación del consentimiento",
     platform_system: "Mailchimp",
     storage_infrastructure: "Cloud - Mailchimp (USA)",
     international_transfer: true,
@@ -219,7 +219,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "The Rocket Science Group LLC (Mailchimp)",
     access_areas: "Marketing",
     risk_level: "MEDIO",
-    notes: "Implementar mecanismo facil de revocacion del consentimiento. Verificar double opt-in. Evaluar CCT con Mailchimp.",
+    notes: "Implementar mecanismo fácil de revocación del consentimiento. Verificar double opt-in. Evaluar CCT con Mailchimp.",
     department: "Marketing",
     created_at: "2026-01-30",
     updated_at: "2026-03-12",
@@ -227,15 +227,15 @@ const mockData: DataInventoryItem[] = [
   {
     id: "8",
     data_name: "Datos de postulantes laborales",
-    data_description: "CV, carta de presentacion, pretensiones de renta, referencias laborales, resultado de evaluaciones psicologicas.",
+    data_description: "CV, carta de presentación, pretensiones de renta, referencias laborales, resultado de evaluaciones psicológicas.",
     data_category: "SENSIBLE",
-    purpose: "Proceso de seleccion y reclutamiento de personal",
+    purpose: "Proceso de selección y reclutamiento de personal",
     legal_basis: "CONSENTIMIENTO",
-    legal_basis_detail: "Consentimiento otorgado al postular al cargo. Evaluaciones psicologicas son datos sensibles.",
-    data_source: "Portal de empleo, recepcion directa de CV",
+    legal_basis_detail: "Consentimiento otorgado al postular al cargo. Evaluaciones psicológicas son datos sensibles.",
+    data_source: "Portal de empleo, recepción directa de CV",
     recipients: "Consultora de seleccion (cuando aplica)",
-    internal_responsible: "Maria Gonzalez - Jefa de RRHH",
-    retention_period: "6 meses desde el cierre del proceso de seleccion",
+    internal_responsible: "María González - Jefa de RRHH",
+    retention_period: "6 meses desde el cierre del proceso de selección",
     platform_system: "Buk Reclutamiento",
     storage_infrastructure: "Cloud - Buk (Chile/AWS)",
     international_transfer: false,
@@ -243,7 +243,7 @@ const mockData: DataInventoryItem[] = [
     transfer_entity: "",
     access_areas: "RRHH",
     risk_level: "MEDIO",
-    notes: "Eliminar datos de postulantes no seleccionados dentro del plazo de retencion. Las evaluaciones psicologicas son datos sensibles.",
+    notes: "Eliminar datos de postulantes no seleccionados dentro del plazo de retención. Las evaluaciones psicológicas son datos sensibles.",
     department: "Recursos Humanos",
     created_at: "2026-02-15",
     updated_at: "2026-03-08",
@@ -253,10 +253,10 @@ const mockData: DataInventoryItem[] = [
     data_name: "Logs de actividad de usuarios",
     data_description: "Registros de acceso a sistemas, direcciones IP, acciones realizadas en plataformas internas, timestamps.",
     data_category: "PERSONAL",
-    purpose: "Seguridad informatica, auditoria de sistemas, deteccion de incidentes de seguridad",
+    purpose: "Seguridad informática, auditoría de sistemas, detección de incidentes de seguridad",
     legal_basis: "INTERES_LEGITIMO",
-    legal_basis_detail: "Interes legitimo en la seguridad de los sistemas de informacion (Art. 13 quater Ley 21.719)",
-    data_source: "Generacion automatica por sistemas internos",
+    legal_basis_detail: "Interés legítimo en la seguridad de los sistemas de información (Art. 13 quater Ley 21.719)",
+    data_source: "Generación automática por sistemas internos",
     recipients: "No se comparten con terceros (salvo requerimiento judicial)",
     internal_responsible: "Felipe Araya - Jefe de TI",
     retention_period: "12 meses",
@@ -265,9 +265,9 @@ const mockData: DataInventoryItem[] = [
     international_transfer: true,
     transfer_country: "Estados Unidos",
     transfer_entity: "Splunk Inc.",
-    access_areas: "TI, Seguridad de la Informacion",
+    access_areas: "TI, Seguridad de la Información",
     risk_level: "BAJO",
-    notes: "Informar a usuarios sobre el monitoreo de actividad. Incluir en politica de uso aceptable de sistemas.",
+    notes: "Informar a usuarios sobre el monitoreo de actividad. Incluir en política de uso aceptable de sistemas.",
     department: "Tecnologia",
     created_at: "2026-02-20",
     updated_at: "2026-03-01",
@@ -277,13 +277,13 @@ const mockData: DataInventoryItem[] = [
     data_name: "Datos de beneficiarios de seguros",
     data_description: "Nombre, RUT, parentesco, datos de contacto de beneficiarios designados en seguros complementarios de salud y vida.",
     data_category: "SENSIBLE",
-    purpose: "Administracion de beneficios de seguros complementarios para colaboradores",
+    purpose: "Administración de beneficios de seguros complementarios para colaboradores",
     legal_basis: "CONSENTIMIENTO",
-    legal_basis_detail: "Consentimiento del titular al designar beneficiarios en poliza de seguros",
-    data_source: "Formulario de designacion de beneficiarios",
+    legal_basis_detail: "Consentimiento del titular al designar beneficiarios en póliza de seguros",
+    data_source: "Formulario de designación de beneficiarios",
     recipients: "Compañia de seguros (MetLife Chile)",
-    internal_responsible: "Maria Gonzalez - Jefa de RRHH",
-    retention_period: "Vigencia de la poliza mas 2 anos",
+    internal_responsible: "María González - Jefa de RRHH",
+    retention_period: "Vigencia de la póliza más 2 años",
     platform_system: "Planilla Excel cifrada",
     storage_infrastructure: "Servidor de archivos on-premise",
     international_transfer: false,
@@ -301,23 +301,23 @@ const mockData: DataInventoryItem[] = [
 const CATEGORY_LABELS: Record<DataCategory, string> = {
   PERSONAL: "Personal",
   SENSIBLE: "Sensible",
-  BIOMETRICO: "Biometrico",
+  BIOMETRICO: "Biométrico",
 }
 
 const LEGAL_BASIS_LABELS: Record<LegalBasis, string> = {
   CONSENTIMIENTO: "Consentimiento",
   LEY: "Ley",
   CONTRATO: "Contrato",
-  INTERES_LEGITIMO: "Interes Legitimo",
-  INTERES_VITAL: "Interes Vital",
-  MISION_PUBLICA: "Mision Publica",
+  INTERES_LEGITIMO: "Interés Legítimo",
+  INTERES_VITAL: "Interés Vital",
+  MISION_PUBLICA: "Misión Pública",
 }
 
 const RISK_LABELS: Record<RiskLevel, string> = {
   BAJO: "Bajo",
   MEDIO: "Medio",
   ALTO: "Alto",
-  CRITICO: "Critico",
+  CRITICO: "Crítico",
 }
 
 const CATEGORY_OPTIONS: DataCategory[] = ["PERSONAL", "SENSIBLE", "BIOMETRICO"]
@@ -510,7 +510,7 @@ export default function InventarioPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-500 mb-1">Descripcion</h4>
+                  <h4 className="text-sm font-semibold text-gray-500 mb-1">Descripción</h4>
                   <p className="text-sm text-gray-700">{selectedItem.data_description}</p>
                 </div>
 
@@ -665,13 +665,13 @@ export default function InventarioPage() {
             iconColor="text-purple-600 bg-purple-50"
           />
           <StatCard
-            title="Datos Biometricos"
+            title="Datos Biométricos"
             value={biometricoCount}
             icon={Shield}
             iconColor="text-red-600 bg-red-50"
           />
           <StatCard
-            title="Riesgo Alto/Critico"
+            title="Riesgo Alto/Crítico"
             value={highRiskCount}
             icon={AlertTriangle}
             iconColor="text-orange-600 bg-orange-50"
@@ -710,7 +710,7 @@ export default function InventarioPage() {
             {showFilters && (
               <div className="flex flex-wrap items-center gap-3 mt-3 pt-3 border-t border-gray-100">
                 <div className="flex items-center gap-2">
-                  <label className="text-xs font-medium text-gray-500">Categoria:</label>
+                  <label className="text-xs font-medium text-gray-500">Categoría:</label>
                   <select
                     value={filterCategory}
                     onChange={(e) => setFilterCategory(e.target.value as DataCategory | "")}
@@ -766,7 +766,7 @@ export default function InventarioPage() {
                 <thead>
                   <tr className="border-b border-gray-100 bg-gray-50/50">
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Nombre del Dato</th>
-                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Categoria</th>
+                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Categoría</th>
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider hidden lg:table-cell">Finalidad</th>
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Base Legal</th>
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider hidden md:table-cell">Departamento</th>

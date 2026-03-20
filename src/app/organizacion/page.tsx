@@ -62,29 +62,29 @@ const initialOrgInfo: OrgInfo = {
   name: "Empresa Ejemplo SpA",
   rut: "76.123.456-7",
   type: "PRIVADA",
-  sector: "Tecnologia",
+  sector: "Tecnología",
   address: "Av. Providencia 1234, Piso 8, Providencia, Santiago",
   website: "https://www.empresaejemplo.cl",
   phone: "+56 2 2345 6789",
 }
 
 const initialDPO: DPOInfo = {
-  name: "Maria Gonzalez Fuentes",
+  name: "María González Fuentes",
   email: "dpo@empresaejemplo.cl",
 }
 
 const initialDepartments: Department[] = [
-  { id: "1", name: "Tecnologia e Informatica", head_name: "Carlos Muñoz", head_email: "cmunoz@empresaejemplo.cl" },
-  { id: "2", name: "Recursos Humanos", head_name: "Ana Perez", head_email: "aperez@empresaejemplo.cl" },
+  { id: "1", name: "Tecnología e Informática", head_name: "Carlos Muñoz", head_email: "cmunoz@empresaejemplo.cl" },
+  { id: "2", name: "Recursos Humanos", head_name: "Ana Pérez", head_email: "aperez@empresaejemplo.cl" },
   { id: "3", name: "Comercial y Ventas", head_name: "Roberto Silva", head_email: "rsilva@empresaejemplo.cl" },
   { id: "4", name: "Legal y Cumplimiento", head_name: "Patricia Torres", head_email: "ptorres@empresaejemplo.cl" },
 ]
 
 const initialCommittee: CommitteeMember[] = [
-  { id: "1", name: "Maria Gonzalez Fuentes", email: "dpo@empresaejemplo.cl", role: "PRESIDENTE" },
+  { id: "1", name: "María González Fuentes", email: "dpo@empresaejemplo.cl", role: "PRESIDENTE" },
   { id: "2", name: "Patricia Torres", email: "ptorres@empresaejemplo.cl", role: "SECRETARIO" },
   { id: "3", name: "Carlos Muñoz", email: "cmunoz@empresaejemplo.cl", role: "MIEMBRO" },
-  { id: "4", name: "Ana Perez", email: "aperez@empresaejemplo.cl", role: "MIEMBRO" },
+  { id: "4", name: "Ana Pérez", email: "aperez@empresaejemplo.cl", role: "MIEMBRO" },
 ]
 
 // --- Helpers ---
@@ -300,8 +300,8 @@ export default function OrganizacionPage() {
   return (
     <AppShell>
       <Header
-        title="Organizacion"
-        subtitle="Informacion de la organizacion y estructura de gobernanza"
+        title="Organización"
+        subtitle="Información de la organización y estructura de gobernanza"
       />
       <div className="p-6 space-y-6">
         {/* Organization Info + DPO */}
@@ -312,7 +312,7 @@ export default function OrganizacionPage() {
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Building2 className="h-5 w-5 text-blue-600" />
-                  Informacion de la Organizacion
+                  Información de la Organización
                 </CardTitle>
                 {!editingOrg && (
                   <Button
@@ -334,7 +334,7 @@ export default function OrganizacionPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Razon Social</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Razón Social</label>
                       <Input
                         value={orgForm.name}
                         onChange={(e) => setOrgForm({ ...orgForm, name: e.target.value })}
@@ -354,7 +354,7 @@ export default function OrganizacionPage() {
                         value={orgForm.type}
                         onChange={(e) => setOrgForm({ ...orgForm, type: e.target.value as "PUBLICA" | "PRIVADA" })}
                       >
-                        <option value="PUBLICA">Publica</option>
+                        <option value="PUBLICA">Pública</option>
                         <option value="PRIVADA">Privada</option>
                       </select>
                     </div>
@@ -367,7 +367,7 @@ export default function OrganizacionPage() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Direccion</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Dirección</label>
                     <Textarea
                       value={orgForm.address}
                       onChange={(e) => setOrgForm({ ...orgForm, address: e.target.value })}
@@ -383,7 +383,7 @@ export default function OrganizacionPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Telefono</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
                       <Input
                         value={orgForm.phone}
                         onChange={(e) => setOrgForm({ ...orgForm, phone: e.target.value })}
@@ -404,7 +404,7 @@ export default function OrganizacionPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                     <div>
-                      <p className="text-xs text-gray-400 uppercase tracking-wide">Razon Social</p>
+                      <p className="text-xs text-gray-400 uppercase tracking-wide">Razón Social</p>
                       <p className="text-sm font-medium text-gray-900 mt-0.5">{orgInfo.name}</p>
                     </div>
                     <div>
@@ -414,7 +414,7 @@ export default function OrganizacionPage() {
                     <div>
                       <p className="text-xs text-gray-400 uppercase tracking-wide">Tipo</p>
                       <Badge variant={orgInfo.type === "PUBLICA" ? "default" : "secondary"} className="mt-1">
-                        {orgInfo.type === "PUBLICA" ? "Publica" : "Privada"}
+                        {orgInfo.type === "PUBLICA" ? "Pública" : "Privada"}
                       </Badge>
                     </div>
                     <div>
@@ -449,7 +449,7 @@ export default function OrganizacionPage() {
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Shield className="h-5 w-5 text-green-600" />
-                  Delegado de Proteccion de Datos
+                  Delegado de Protección de Datos
                 </CardTitle>
                 {!editingDPO && (
                   <Button
@@ -503,7 +503,7 @@ export default function OrganizacionPage() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-gray-900">{dpo.name}</p>
-                      <p className="text-xs text-gray-500">Delegado de Proteccion de Datos</p>
+                      <p className="text-xs text-gray-500">Delegado de Protección de Datos</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -514,8 +514,8 @@ export default function OrganizacionPage() {
                   </div>
                   <div className="bg-green-50 rounded-lg p-3">
                     <p className="text-xs text-green-700">
-                      El DPO es el responsable de supervisar el cumplimiento de la Ley 21.719 y actua como punto de contacto
-                      con la Agencia de Proteccion de Datos Personales.
+                      El DPO es el responsable de supervisar el cumplimiento de la Ley 21.719 y actúa como punto de contacto
+                      con la Agencia de Protección de Datos Personales.
                     </p>
                   </div>
                 </div>
@@ -595,7 +595,7 @@ export default function OrganizacionPage() {
             <div className="flex items-center justify-between">
               <CardTitle className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-orange-600" />
-                Comite de Proteccion de Datos
+                Comité de Protección de Datos
               </CardTitle>
               <Button
                 size="sm"
@@ -612,7 +612,7 @@ export default function OrganizacionPage() {
           <CardContent className="space-y-4">
             {showAddMember && (
               <div className="border rounded-lg p-4 bg-gray-50 space-y-3">
-                <p className="text-sm font-medium text-gray-700">Nuevo Miembro del Comite</p>
+                <p className="text-sm font-medium text-gray-700">Nuevo Miembro del Comité</p>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                   <Input
                     placeholder="Nombre completo"
@@ -656,7 +656,7 @@ export default function OrganizacionPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {committee.length === 0 ? (
                 <div className="col-span-2 text-center py-8 text-gray-500 text-sm">
-                  No hay miembros en el comite
+                  No hay miembros en el comité
                 </div>
               ) : (
                 committee.map((member) => (

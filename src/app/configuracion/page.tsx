@@ -23,25 +23,25 @@ import {
 type Tab = "equipo" | "roles" | "notificaciones" | "seguridad" | "sistema"
 
 const mockTeam = [
-  { id: "1", name: "Maria Rodriguez", email: "mrodriguez@empresa.cl", role: "ADMIN" as const, active: true },
-  { id: "2", name: "Carlos Mendez", email: "cmendez@empresa.cl", role: "DPO" as const, active: true },
+  { id: "1", name: "María Rodríguez", email: "mrodriguez@empresa.cl", role: "ADMIN" as const, active: true },
+  { id: "2", name: "Carlos Méndez", email: "cmendez@empresa.cl", role: "DPO" as const, active: true },
   { id: "3", name: "Ana Torres", email: "atorres@empresa.cl", role: "RESPONSABLE" as const, active: true },
   { id: "4", name: "Pedro Soto", email: "psoto@empresa.cl", role: "AUDITOR" as const, active: true },
   { id: "5", name: "Laura Vega", email: "lvega@empresa.cl", role: "CONSULTOR" as const, active: true },
   { id: "6", name: "Diego Morales", email: "dmorales@empresa.cl", role: "USUARIO" as const, active: true },
   { id: "7", name: "Camila Reyes", email: "creyes@empresa.cl", role: "USUARIO" as const, active: true },
   { id: "8", name: "Felipe Rojas", email: "frojas@empresa.cl", role: "USUARIO" as const, active: false },
-  { id: "9", name: "Valentina Diaz", email: "vdiaz@empresa.cl", role: "CONSULTOR" as const, active: true },
-  { id: "10", name: "Sebastian Vargas", email: "svargas@empresa.cl", role: "RESPONSABLE" as const, active: true },
+  { id: "9", name: "Valentina Díaz", email: "vdiaz@empresa.cl", role: "CONSULTOR" as const, active: true },
+  { id: "10", name: "Sebastián Vargas", email: "svargas@empresa.cl", role: "RESPONSABLE" as const, active: true },
 ]
 
 const roleDescriptions: Record<string, string> = {
-  ADMIN: "Acceso total al sistema. Gestion de usuarios y configuracion.",
-  DPO: "Delegado de Proteccion de Datos. Supervision del cumplimiento.",
-  RESPONSABLE: "Responsable de tratamiento. Gestion de inventario y evaluaciones.",
-  AUDITOR: "Acceso de lectura. Generacion de reportes y auditorias.",
+  ADMIN: "Acceso total al sistema. Gestión de usuarios y configuración.",
+  DPO: "Delegado de Protección de Datos. Supervisión del cumplimiento.",
+  RESPONSABLE: "Responsable de tratamiento. Gestión de inventario y evaluaciones.",
+  AUDITOR: "Acceso de lectura. Generación de reportes y auditorías.",
   CONSULTOR: "Acceso limitado. Consulta y soporte al equipo.",
-  USUARIO: "Acceso basico. Responde evaluaciones y gestiona tareas asignadas.",
+  USUARIO: "Acceso básico. Responde evaluaciones y gestiona tareas asignadas.",
 }
 
 const roleColor: Record<string, string> = {
@@ -67,7 +67,7 @@ export default function ConfiguracionPage() {
 
   return (
     <AppShell>
-      <Header title="Configuracion" subtitle="Administracion del sistema y equipo de trabajo" />
+      <Header title="Configuración" subtitle="Administración del sistema y equipo de trabajo" />
       <div className="p-6 space-y-6">
         {/* Tabs */}
         <div className="flex gap-1 bg-gray-100 p-1 rounded-lg w-fit">
@@ -113,7 +113,7 @@ export default function ConfiguracionPage() {
                         <option key={role} value={role}>{role}</option>
                       ))}
                     </select>
-                    <Button>Enviar Invitacion</Button>
+                    <Button>Enviar Invitación</Button>
                     <Button variant="ghost" onClick={() => setShowInvite(false)}>Cancelar</Button>
                   </div>
                 </CardContent>
@@ -186,15 +186,15 @@ export default function ConfiguracionPage() {
         {activeTab === "notificaciones" && (
           <Card>
             <CardHeader>
-              <CardTitle>Configuracion de Notificaciones</CardTitle>
+              <CardTitle>Configuración de Notificaciones</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {[
                 { label: "Solicitudes ARCO nuevas", desc: "Notificar al DPO cuando se recibe una solicitud", enabled: true },
                 { label: "Brechas de seguridad", desc: "Alerta inmediata al equipo de respuesta", enabled: true },
-                { label: "Acciones vencidas", desc: "Recordatorio de acciones que superaron fecha limite", enabled: true },
-                { label: "Evaluaciones completadas", desc: "Notificar al responsable cuando se completa una evaluacion", enabled: false },
-                { label: "Documentos por revisar", desc: "Aviso cuando un documento requiere aprobacion", enabled: true },
+                { label: "Acciones vencidas", desc: "Recordatorio de acciones que superaron fecha límite", enabled: true },
+                { label: "Evaluaciones completadas", desc: "Notificar al responsable cuando se completa una evaluación", enabled: false },
+                { label: "Documentos por revisar", desc: "Aviso cuando un documento requiere aprobación", enabled: true },
                 { label: "Resumen semanal", desc: "Reporte semanal por correo del estado general", enabled: false },
               ].map((notif, idx) => (
                 <div key={idx} className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50">
@@ -219,29 +219,29 @@ export default function ConfiguracionPage() {
         {activeTab === "seguridad" && (
           <div className="space-y-4">
             <Card>
-              <CardHeader><CardTitle>Politicas de Seguridad</CardTitle></CardHeader>
+              <CardHeader><CardTitle>Políticas de Seguridad</CardTitle></CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium">Longitud minima contrasena</label>
+                    <label className="text-sm font-medium">Longitud mínima contraseña</label>
                     <Input type="number" defaultValue="12" className="mt-1" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium">Expiracion de sesion (minutos)</label>
+                    <label className="text-sm font-medium">Expiración de sesión (minutos)</label>
                     <Input type="number" defaultValue="30" className="mt-1" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium">Intentos maximos de login</label>
+                    <label className="text-sm font-medium">Intentos máximos de login</label>
                     <Input type="number" defaultValue="5" className="mt-1" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium">Dias para cambio de contrasena</label>
+                    <label className="text-sm font-medium">Días para cambio de contraseña</label>
                     <Input type="number" defaultValue="90" className="mt-1" />
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
                   <div>
-                    <p className="font-medium text-sm">Autenticacion de dos factores (2FA)</p>
+                    <p className="font-medium text-sm">Autenticación de dos factores (2FA)</p>
                     <p className="text-xs text-gray-500">Requerir 2FA para todos los usuarios</p>
                   </div>
                   <Badge variant="success">Recomendado</Badge>
@@ -249,15 +249,15 @@ export default function ConfiguracionPage() {
               </CardContent>
             </Card>
             <Card>
-              <CardHeader><CardTitle>Log de Auditoria</CardTitle></CardHeader>
+              <CardHeader><CardTitle>Log de Auditoría</CardTitle></CardHeader>
               <CardContent>
                 <div className="space-y-2">
                   {[
-                    { action: "Login exitoso", user: "Maria Rodriguez", time: "Hace 5 min" },
-                    { action: "Evaluacion GAP creada", user: "Carlos Mendez", time: "Hace 1 hora" },
+                    { action: "Login exitoso", user: "María Rodríguez", time: "Hace 5 min" },
+                    { action: "Evaluación GAP creada", user: "Carlos Méndez", time: "Hace 1 hora" },
                     { action: "Documento aprobado", user: "Ana Torres", time: "Hace 2 horas" },
                     { action: "Solicitud ARCO respondida", user: "Pedro Soto", time: "Hace 3 horas" },
-                    { action: "Brecha reportada", user: "Laura Vega", time: "Hace 1 dia" },
+                    { action: "Brecha reportada", user: "Laura Vega", time: "Hace 1 día" },
                   ].map((log, idx) => (
                     <div key={idx} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
                       <div className="flex items-center gap-2">
@@ -280,11 +280,11 @@ export default function ConfiguracionPage() {
         {activeTab === "sistema" && (
           <div className="space-y-4">
             <Card>
-              <CardHeader><CardTitle>Informacion del Sistema</CardTitle></CardHeader>
+              <CardHeader><CardTitle>Información del Sistema</CardTitle></CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div><span className="text-gray-500">Version:</span> <span className="font-medium">1.0.0</span></div>
-                  <div><span className="text-gray-500">Entorno:</span> <span className="font-medium">Produccion</span></div>
+                  <div><span className="text-gray-500">Entorno:</span> <span className="font-medium">Producción</span></div>
                   <div><span className="text-gray-500">Base de Datos:</span> <span className="font-medium">Supabase PostgreSQL</span></div>
                   <div><span className="text-gray-500">Hosting:</span> <span className="font-medium">GitHub Pages</span></div>
                   <div><span className="text-gray-500">Framework:</span> <span className="font-medium">Next.js 14</span></div>
@@ -293,7 +293,7 @@ export default function ConfiguracionPage() {
               </CardContent>
             </Card>
             <Card>
-              <CardHeader><CardTitle>Conexion Supabase</CardTitle></CardHeader>
+              <CardHeader><CardTitle>Conexión Supabase</CardTitle></CardHeader>
               <CardContent className="space-y-3">
                 <div>
                   <label className="text-sm font-medium">SUPABASE_URL</label>
@@ -305,7 +305,7 @@ export default function ConfiguracionPage() {
                 </div>
                 <Button variant="outline" size="sm">
                   <Database className="h-4 w-4 mr-2" />
-                  Probar Conexion
+                  Probar Conexión
                 </Button>
               </CardContent>
             </Card>

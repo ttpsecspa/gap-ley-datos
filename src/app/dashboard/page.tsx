@@ -17,7 +17,7 @@ import {
   CheckCircle2,
 } from "lucide-react"
 
-// Mock data - sera reemplazado por Supabase queries
+// Mock data - será reemplazado por Supabase queries
 const mockStats = {
   overallScore: 42,
   totalFindings: 23,
@@ -39,8 +39,8 @@ const mockCategoryScores = [
 ]
 
 const mockRecentActions = [
-  { id: "1", title: "Implementar politica de consentimiento", priority: "CRITICA", status: "EN_PROGRESO", dueDate: "2026-04-15" },
-  { id: "2", title: "Registrar bases de datos en catalogo", priority: "ALTA", status: "PENDIENTE", dueDate: "2026-04-01" },
+  { id: "1", title: "Implementar política de consentimiento", priority: "CRÍTICA", status: "EN_PROGRESO", dueDate: "2026-04-15" },
+  { id: "2", title: "Registrar bases de datos en catálogo", priority: "ALTA", status: "PENDIENTE", dueDate: "2026-04-01" },
   { id: "3", title: "Nombrar DPO formalmente", priority: "ALTA", status: "EN_PROGRESO", dueDate: "2026-03-30" },
   { id: "4", title: "Crear procedimiento ARCO", priority: "MEDIA", status: "PENDIENTE", dueDate: "2026-05-01" },
   { id: "5", title: "Evaluar transferencias internacionales", priority: "ALTA", status: "PENDIENTE", dueDate: "2026-04-20" },
@@ -48,7 +48,7 @@ const mockRecentActions = [
 
 const priorityVariant = (p: string) => {
   switch (p) {
-    case "CRITICA": return "destructive"
+    case "CRÍTICA": return "destructive"
     case "ALTA": return "warning"
     case "MEDIA": return "default"
     default: return "secondary"
@@ -73,7 +73,7 @@ export default function DashboardPage() {
     <AppShell>
       <Header
         title="Dashboard"
-        subtitle="Vision general del estado de cumplimiento - Ley 21.719"
+        subtitle="Visión general del estado de cumplimiento - Ley 21.719"
       />
       <div className="p-6 space-y-6">
         {/* Score principal + KPIs */}
@@ -100,7 +100,7 @@ export default function DashboardPage() {
               <div className="space-y-2">
                 <h3 className="font-semibold text-gray-900">Score Global</h3>
                 <p className="text-sm text-gray-500">
-                  {score < 50 ? "Nivel critico - Se requieren acciones inmediatas" :
+                  {score < 50 ? "Nivel crítico - Se requieren acciones inmediatas" :
                    score < 80 ? "Nivel medio - Avance parcial en cumplimiento" :
                    "Buen nivel - Mantener mejora continua"}
                 </p>
@@ -159,12 +159,12 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Cumplimiento por categoria */}
+        {/* Cumplimiento por categoría */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <ClipboardCheck className="h-5 w-5 text-blue-600" />
-              Cumplimiento por Categoria
+              Cumplimiento por Categoría
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -225,27 +225,27 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
-          {/* Resumen rapido */}
+          {/* Resumen rápido */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-500" />
-                Estado de Implementacion
+                Estado de Implementación
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 {[
-                  { label: "Politica de Privacidad", done: true },
+                  { label: "Política de Privacidad", done: true },
                   { label: "Nombramiento DPO", done: false, inProgress: true },
-                  { label: "Catalogo de Bases de Datos", done: false, inProgress: true },
+                  { label: "Catálogo de Bases de Datos", done: false, inProgress: true },
                   { label: "Protocolo ARCO-POB", done: false },
                   { label: "Protocolo Brechas de Seguridad", done: false },
-                  { label: "Evaluacion de Impacto (EIPD)", done: false },
+                  { label: "Evaluación de Impacto (EIPD)", done: false },
                   { label: "Contratos con Encargados", done: false },
                   { label: "Consentimiento Informado", done: false },
                   { label: "Transferencia Internacional", done: false },
-                  { label: "Capacitacion del Personal", done: false },
+                  { label: "Capacitación del Personal", done: false },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 ${

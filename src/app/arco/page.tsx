@@ -37,9 +37,9 @@ import type {
 
 const REQUEST_TYPE_LABELS: Record<RequestType, string> = {
   ACCESO: "Acceso",
-  RECTIFICACION: "Rectificacion",
-  SUPRESION: "Supresion",
-  OPOSICION: "Oposicion",
+  RECTIFICACION: "Rectificación",
+  SUPRESION: "Supresión",
+  OPOSICION: "Oposición",
   PORTABILIDAD: "Portabilidad",
   BLOQUEO: "Bloqueo",
 }
@@ -119,7 +119,7 @@ function SLAIndicator({ dueDate, status }: { dueDate: string; status: RequestSta
       }`}
     >
       <Clock className="h-3 w-3" />
-      {remaining} dias habiles
+      {remaining} días hábiles
     </span>
   )
 }
@@ -148,8 +148,8 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     logs: [
       { id: "log-1", request_id: "req-001", action: "Solicitud recibida via formulario web", performed_by_id: "system", notes: null, performed_at: "2026-02-25T10:00:00Z" },
       { id: "log-2", request_id: "req-001", action: "Asignada a Carlos Muñoz", performed_by_id: "user-admin", notes: "DPO asigna caso", performed_at: "2026-02-26T09:00:00Z" },
-      { id: "log-3", request_id: "req-001", action: "Verificacion de identidad completada", performed_by_id: "user-1", notes: "RUT validado contra registro civil", performed_at: "2026-02-28T11:30:00Z" },
-      { id: "log-4", request_id: "req-001", action: "Recopilacion de datos en curso", performed_by_id: "user-1", notes: "Consultando areas de RRHH, Comercial y TI", performed_at: "2026-03-05T14:00:00Z" },
+      { id: "log-3", request_id: "req-001", action: "Verificación de identidad completada", performed_by_id: "user-1", notes: "RUT validado contra registro civil", performed_at: "2026-02-28T11:30:00Z" },
+      { id: "log-4", request_id: "req-001", action: "Recopilación de datos en curso", performed_by_id: "user-1", notes: "Consultando áreas de RRHH, Comercial y TI", performed_at: "2026-03-05T14:00:00Z" },
     ],
   },
   {
@@ -159,7 +159,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     requester_name: "Pedro Soto Alarcon",
     requester_email: "pedro.soto@email.cl",
     requester_rut: "15.678.901-2",
-    description: "Solicito la eliminacion completa de mis datos personales de sus sistemas. Ya no soy cliente.",
+    description: "Solicito la eliminación completa de mis datos personales de sus sistemas. Ya no soy cliente.",
     status: "RECIBIDA",
     received_date: "2026-03-15",
     due_date: "2026-04-27",
@@ -171,7 +171,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     created_at: "2026-03-15T08:00:00Z",
     updated_at: "2026-03-15T08:00:00Z",
     logs: [
-      { id: "log-5", request_id: "req-002", action: "Solicitud recibida via correo electronico", performed_by_id: "system", notes: null, performed_at: "2026-03-15T08:00:00Z" },
+      { id: "log-5", request_id: "req-002", action: "Solicitud recibida vía correo electrónico", performed_by_id: "system", notes: null, performed_at: "2026-03-15T08:00:00Z" },
     ],
   },
   {
@@ -181,22 +181,22 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     requester_name: "Ana Lopez Valenzuela",
     requester_email: "ana.lopez@email.cl",
     requester_rut: "9.876.543-1",
-    description: "Mi direccion y telefono de contacto estan desactualizados. Solicito rectificacion con los datos correctos adjuntos.",
+    description: "Mi dirección y teléfono de contacto están desactualizados. Solicito rectificación con los datos correctos adjuntos.",
     status: "RESPONDIDA",
     received_date: "2026-02-10",
     due_date: "2026-03-24",
     response_date: "2026-03-10",
     assigned_to_id: "user-2",
     assigned_to_name: "Laura Diaz",
-    response_text: "Datos actualizados en todos los sistemas. Se adjunta confirmacion.",
+    response_text: "Datos actualizados en todos los sistemas. Se adjunta confirmación.",
     resolution: "ACEPTADA",
     created_at: "2026-02-10T14:00:00Z",
     updated_at: "2026-03-10T16:00:00Z",
     logs: [
       { id: "log-6", request_id: "req-003", action: "Solicitud recibida", performed_by_id: "system", notes: null, performed_at: "2026-02-10T14:00:00Z" },
       { id: "log-7", request_id: "req-003", action: "Asignada a Laura Diaz", performed_by_id: "user-admin", notes: null, performed_at: "2026-02-11T09:00:00Z" },
-      { id: "log-8", request_id: "req-003", action: "Datos rectificados en CRM y ERP", performed_by_id: "user-2", notes: "Actualizados direccion y telefono", performed_at: "2026-03-05T10:00:00Z" },
-      { id: "log-9", request_id: "req-003", action: "Respuesta enviada al titular", performed_by_id: "user-2", notes: "Notificacion por correo electronico", performed_at: "2026-03-10T16:00:00Z" },
+      { id: "log-8", request_id: "req-003", action: "Datos rectificados en CRM y ERP", performed_by_id: "user-2", notes: "Actualizados dirección y teléfono", performed_at: "2026-03-05T10:00:00Z" },
+      { id: "log-9", request_id: "req-003", action: "Respuesta enviada al titular", performed_by_id: "user-2", notes: "Notificación por correo electrónico", performed_at: "2026-03-10T16:00:00Z" },
     ],
   },
   {
@@ -213,7 +213,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     response_date: "2026-02-15",
     assigned_to_id: "user-1",
     assigned_to_name: "Carlos Muñoz",
-    response_text: "Se ha eliminado su perfil de las listas de marketing. No recibira mas comunicaciones comerciales.",
+    response_text: "Se ha eliminado su perfil de las listas de marketing. No recibirá más comunicaciones comerciales.",
     resolution: "ACEPTADA",
     created_at: "2026-01-20T11:00:00Z",
     updated_at: "2026-02-20T10:00:00Z",
@@ -280,7 +280,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     requester_name: "Isabel Torres Morales",
     requester_email: "isabel.torres@email.cl",
     requester_rut: "16.789.012-3",
-    description: "Quiero saber que datos personales mios tienen almacenados y con que finalidad los tratan.",
+    description: "Quiero saber qué datos personales míos tienen almacenados y con qué finalidad los tratan.",
     status: "VENCIDA",
     received_date: "2026-01-10",
     due_date: "2026-02-20",
@@ -294,7 +294,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     logs: [
       { id: "log-21", request_id: "req-007", action: "Solicitud recibida", performed_by_id: "system", notes: null, performed_at: "2026-01-10T12:00:00Z" },
       { id: "log-22", request_id: "req-007", action: "Asignada a Carlos Muñoz", performed_by_id: "user-admin", notes: null, performed_at: "2026-01-12T09:00:00Z" },
-      { id: "log-23", request_id: "req-007", action: "Solicitud marcada como vencida", performed_by_id: "system", notes: "Plazo legal de 30 dias habiles excedido sin respuesta", performed_at: "2026-02-21T00:00:00Z" },
+      { id: "log-23", request_id: "req-007", action: "Solicitud marcada como vencida", performed_by_id: "system", notes: "Plazo legal de 30 días hábiles excedido sin respuesta", performed_at: "2026-02-21T00:00:00Z" },
     ],
   },
 ]
@@ -409,7 +409,7 @@ export default function ARCOPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <FileText className="h-5 w-5 text-blue-600" />
-                  Informacion de la Solicitud
+                  Información de la Solicitud
                   <Badge className={REQUEST_TYPE_COLORS[selectedReq.request_type]}>
                     {REQUEST_TYPE_LABELS[selectedReq.request_type]}
                   </Badge>
@@ -434,7 +434,7 @@ export default function ARCOPage() {
                     <p className="text-sm font-medium">{selectedReq.requester_rut || "No informado"}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Correo Electronico</p>
+                    <p className="text-xs text-gray-500 mb-1">Correo Electrónico</p>
                     <p className="text-sm font-medium flex items-center gap-1">
                       <Mail className="h-3 w-3 text-gray-400" />
                       {selectedReq.requester_email}
@@ -445,16 +445,16 @@ export default function ARCOPage() {
                     <p className="text-sm font-medium">{selectedReq.assigned_to_name || "Sin asignar"}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Fecha Recepcion</p>
+                    <p className="text-xs text-gray-500 mb-1">Fecha Recepción</p>
                     <p className="text-sm font-medium">{formatDate(selectedReq.received_date)}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Fecha Limite (30 dias habiles)</p>
+                    <p className="text-xs text-gray-500 mb-1">Fecha Límite (30 días hábiles)</p>
                     <p className="text-sm font-medium">{formatDate(selectedReq.due_date)}</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Descripcion</p>
+                  <p className="text-xs text-gray-500 mb-1">Descripción</p>
                   <p className="text-sm text-gray-700 bg-gray-50 p-3 rounded-lg">{selectedReq.description}</p>
                 </div>
                 {selectedReq.response_text && (
@@ -467,7 +467,7 @@ export default function ARCOPage() {
                 )}
                 {selectedReq.resolution && (
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Resolucion</p>
+                    <p className="text-xs text-gray-500 mb-1">Resolución</p>
                     <Badge
                       variant={
                         selectedReq.resolution === "ACEPTADA"
@@ -493,7 +493,7 @@ export default function ARCOPage() {
                     <SLAIndicator dueDate={selectedReq.due_date} status={selectedReq.status} />
                   </div>
                   <p className="text-xs text-gray-400">
-                    Ley 21.719 - Art. 11: 30 dias habiles para responder
+                    Ley 21.719 - Art. 11: 30 días hábiles para responder
                   </p>
                   {selectedReq.response_date && (
                     <p className="text-xs text-green-600">
@@ -514,7 +514,7 @@ export default function ARCOPage() {
                     <span className="font-medium">{selectedReq.logs?.length || 0}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-500">Dias transcurridos</span>
+                    <span className="text-gray-500">Días transcurridos</span>
                     <span className="font-medium">
                       {Math.ceil(
                         (new Date().getTime() - new Date(selectedReq.received_date).getTime()) / (1000 * 60 * 60 * 24)
@@ -531,7 +531,7 @@ export default function ARCOPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-blue-600" />
-                Linea de Tiempo
+                Línea de Tiempo
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -570,7 +570,7 @@ export default function ARCOPage() {
     <AppShell>
       <Header
         title="Solicitudes ARCO-POB"
-        subtitle="Gestion de derechos de titulares de datos - Ley 21.719 (Art. 5-11)"
+        subtitle="Gestión de derechos de titulares de datos - Ley 21.719 (Art. 5-11)"
       />
       <div className="p-6 space-y-6">
         {/* Stats row */}
@@ -601,7 +601,7 @@ export default function ARCOPage() {
           />
           <StatCard
             title="Tiempo Promedio"
-            value={`${stats.avgDays} dias`}
+            value={`${stats.avgDays} días`}
             description="calendario"
             icon={Clock}
             iconColor="text-indigo-600 bg-indigo-50"
@@ -777,12 +777,12 @@ export default function ARCOPage() {
                   <tr className="border-b bg-gray-50">
                     <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Titular</th>
                     <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Tipo</th>
-                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Fecha Recepcion</th>
-                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Fecha Limite</th>
+                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Fecha Recepción</th>
+                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Fecha Límite</th>
                     <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">SLA</th>
                     <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Estado</th>
                     <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Asignado</th>
-                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Resolucion</th>
+                    <th className="text-left text-xs font-medium text-gray-500 uppercase px-4 py-3">Resolución</th>
                     <th className="text-right text-xs font-medium text-gray-500 uppercase px-4 py-3">Acciones</th>
                   </tr>
                 </thead>
@@ -892,7 +892,7 @@ export default function ARCOPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electronico *</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico *</label>
                 <Input
                   type="email"
                   value={newForm.requester_email}
@@ -909,7 +909,7 @@ export default function ARCOPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Descripcion de la Solicitud *</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Descripción de la Solicitud *</label>
                 <Textarea
                   value={newForm.description}
                   onChange={(e) => setNewForm({ ...newForm, description: e.target.value })}
@@ -919,9 +919,9 @@ export default function ARCOPage() {
               </div>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
                 <p className="text-xs text-blue-700">
-                  <strong>Plazo legal:</strong> Segun el Art. 11 de la Ley 21.719, el responsable debe responder dentro de
-                  30 dias habiles contados desde la recepcion de la solicitud. La fecha limite se calculara
-                  automaticamente.
+                  <strong>Plazo legal:</strong> Según el Art. 11 de la Ley 21.719, el responsable debe responder dentro de
+                  30 días hábiles contados desde la recepción de la solicitud. La fecha límite se calculará
+                  automáticamente.
                 </p>
               </div>
               <div className="flex gap-3 justify-end pt-2">

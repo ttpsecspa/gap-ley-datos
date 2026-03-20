@@ -22,14 +22,14 @@ import {
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/organizacion", label: "Organizacion", icon: Building2 },
+  { href: "/organizacion", label: "Organización", icon: Building2 },
   { href: "/inventario", label: "Inventario de Datos", icon: Database },
-  { href: "/evaluacion", label: "Evaluacion GAP", icon: ClipboardCheck },
-  { href: "/plan-accion", label: "Plan de Accion", icon: ListTodo },
+  { href: "/evaluacion", label: "Evaluación GAP", icon: ClipboardCheck },
+  { href: "/plan-accion", label: "Plan de Acción", icon: ListTodo },
   { href: "/arco", label: "Derechos ARCO-POB", icon: UserCheck },
   { href: "/brechas", label: "Brechas de Seguridad", icon: ShieldAlert },
   { href: "/documentos", label: "Documentos", icon: FileText },
-  { href: "/configuracion", label: "Configuracion", icon: Settings },
+  { href: "/configuracion", label: "Configuración", icon: Settings },
 ]
 
 export function Sidebar() {
@@ -53,7 +53,7 @@ export function Sidebar() {
           {sidebarOpen && (
             <div>
               <h1 className="font-bold text-sm">GAP Ley 21.719</h1>
-              <p className="text-[10px] text-slate-400">Proteccion de Datos</p>
+              <p className="text-[10px] text-slate-400">Protección de Datos</p>
             </div>
           )}
         </div>
@@ -98,7 +98,7 @@ export function Sidebar() {
             </div>
           )}
           {sidebarOpen && (
-            <button onClick={signOut} className="text-slate-400 hover:text-red-400 transition-colors" title="Cerrar sesion">
+            <button onClick={signOut} className="text-slate-400 hover:text-red-400 transition-colors" title="Cerrar sesión">
               <LogOut className="h-4 w-4" />
             </button>
           )}

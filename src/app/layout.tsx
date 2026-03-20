@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}

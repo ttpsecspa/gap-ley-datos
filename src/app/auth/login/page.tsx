@@ -15,8 +15,10 @@ export default function LoginPage() {
   const { signIn, loading, demoMode } = useAuthStore()
   const router = useRouter()
 
-  // En modo demo, redirigir directamente al dashboard
-  const handleDemo = () => {
+  // En modo demo, inicializar usuario demo y redirigir
+  const handleDemo = async () => {
+    const { initialize } = useAuthStore.getState()
+    await initialize()
     router.push("/dashboard")
   }
 
@@ -47,15 +49,15 @@ export default function LoginPage() {
 
         <div className="space-y-6">
           <h2 className="text-4xl font-bold leading-tight">
-            Proteccion de Datos<br />Personales
+            Protección de Datos<br />Personales
           </h2>
           <p className="text-lg text-slate-300 max-w-md">
-            Sistema integral de evaluacion de cumplimiento de la Ley Marco de
-            Proteccion de Datos Personales de Chile.
+            Sistema integral de evaluación de cumplimiento de la Ley Marco de
+            Protección de Datos Personales de Chile.
           </p>
           <div className="grid grid-cols-2 gap-4 max-w-md">
             {[
-              { n: "7", t: "Modulos de evaluacion" },
+              { n: "7", t: "Módulos de evaluación" },
               { n: "57", t: "Preguntas de cumplimiento" },
               { n: "6", t: "Derechos ARCO-POB" },
               { n: "100%", t: "Alineado a Ley 21.719" },
@@ -84,7 +86,7 @@ export default function LoginPage() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h2 className="text-2xl font-bold text-gray-900">Iniciar sesion</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Iniciar sesión</h2>
             <p className="text-sm text-gray-500 mt-1">Ingresa tus credenciales para acceder al sistema</p>
           </div>
 
@@ -109,7 +111,7 @@ export default function LoginPage() {
             )}
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700">Correo electronico</label>
+              <label className="text-sm font-medium text-gray-700">Correo electrónico</label>
               <Input
                 type="email"
                 placeholder="tu@empresa.cl"
@@ -120,7 +122,7 @@ export default function LoginPage() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700">Contrasena</label>
+              <label className="text-sm font-medium text-gray-700">Contraseña</label>
               <div className="relative">
                 <Input
                   type={showPassword ? "text" : "password"}
