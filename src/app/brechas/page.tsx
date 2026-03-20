@@ -70,26 +70,26 @@ const mockBreaches: Breach[] = [
     status: "INVESTIGANDO",
     detected_date: "2026-03-18",
     affected_titulars_count: 4520,
-    affected_data_types: ["RUT", "Nombre completo", "Correo electronico", "Telefono", "Direccion"],
+    affected_data_types: ["RUT", "Nombre completo", "Correo electrónico", "Teléfono", "Dirección"],
     notified_agency: true,
     notified_titulars: false,
-    responsible_user: "Carlos Mendez",
+    responsible_user: "Carlos Méndez",
     timeline: [
-      { id: "t1", event_description: "Deteccion de actividad anomala en logs del servidor de BD", event_date: "2026-03-18T08:30:00", recorded_by: "Sistema SIEM", evidence_url: "/evidencias/BR-001/alert-log.pdf" },
-      { id: "t2", event_description: "Confirmacion de acceso no autorizado. Credenciales de usuario admin comprometidas.", event_date: "2026-03-18T10:15:00", recorded_by: "Carlos Mendez", evidence_url: "/evidencias/BR-001/forensic-report.pdf" },
+      { id: "t1", event_description: "Detección de actividad anómala en logs del servidor de BD", event_date: "2026-03-18T08:30:00", recorded_by: "Sistema SIEM", evidence_url: "/evidencias/BR-001/alert-log.pdf" },
+      { id: "t2", event_description: "Confirmación de acceso no autorizado. Credenciales de usuario admin comprometidas.", event_date: "2026-03-18T10:15:00", recorded_by: "Carlos Méndez", evidence_url: "/evidencias/BR-001/forensic-report.pdf" },
       { id: "t3", event_description: "Bloqueo de IP atacante y cambio de credenciales comprometidas", event_date: "2026-03-18T11:00:00", recorded_by: "Equipo TI" },
-      { id: "t4", event_description: "Notificacion enviada a Agencia de Proteccion de Datos Personales", event_date: "2026-03-18T14:00:00", recorded_by: "Maria Lopez (DPO)", evidence_url: "/evidencias/BR-001/notificacion-agencia.pdf" },
-      { id: "t5", event_description: "Inicio de investigacion forense detallada", event_date: "2026-03-19T09:00:00", recorded_by: "Carlos Mendez" },
+      { id: "t4", event_description: "Notificación enviada a Agencia de Protección de Datos Personales", event_date: "2026-03-18T14:00:00", recorded_by: "María López (DPO)", evidence_url: "/evidencias/BR-001/notificacion-agencia.pdf" },
+      { id: "t5", event_description: "Inicio de investigación forense detallada", event_date: "2026-03-19T09:00:00", recorded_by: "Carlos Méndez" },
     ],
     corrective_measures: [
-      { id: "cm1", description: "Implementar autenticacion multifactor (MFA) para todos los accesos a BD", responsible: "Equipo TI", due_date: "2026-03-25", completed: false },
-      { id: "cm2", description: "Revision y rotacion completa de credenciales de servicio", responsible: "Equipo TI", due_date: "2026-03-22", completed: true },
-      { id: "cm3", description: "Notificar a titulares afectados con recomendaciones de seguridad", responsible: "Maria Lopez (DPO)", due_date: "2026-03-23", completed: false },
+      { id: "cm1", description: "Implementar autenticación multifactor (MFA) para todos los accesos a BD", responsible: "Equipo TI", due_date: "2026-03-25", completed: false },
+      { id: "cm2", description: "Revisión y rotación completa de credenciales de servicio", responsible: "Equipo TI", due_date: "2026-03-22", completed: true },
+      { id: "cm3", description: "Notificar a titulares afectados con recomendaciones de seguridad", responsible: "María López (DPO)", due_date: "2026-03-23", completed: false },
     ],
   },
   {
     id: "BR-002",
-    description: "Envio masivo de correos con datos personales de pacientes a destinatarios incorrectos por error en el sistema de mailing automatico.",
+    description: "Envío masivo de correos con datos personales de pacientes a destinatarios incorrectos por error en el sistema de mailing automático.",
     severity: "ALTA",
     status: "NOTIFICADA",
     detected_date: "2026-03-10",
@@ -97,56 +97,56 @@ const mockBreaches: Breach[] = [
     affected_data_types: ["Nombre completo", "RUT", "Datos de salud"],
     notified_agency: true,
     notified_titulars: true,
-    responsible_user: "Ana Rodriguez",
+    responsible_user: "Ana Rodríguez",
     timeline: [
-      { id: "t1", event_description: "Recepcion de reclamos de usuarios que recibieron datos ajenos", event_date: "2026-03-10T11:00:00", recorded_by: "Mesa de Ayuda" },
-      { id: "t2", event_description: "Identificacion de error en plantilla de correo masivo", event_date: "2026-03-10T14:30:00", recorded_by: "Ana Rodriguez", evidence_url: "/evidencias/BR-002/error-template.png" },
-      { id: "t3", event_description: "Detencion del envio y recall de correos donde fue posible", event_date: "2026-03-10T15:00:00", recorded_by: "Equipo TI" },
-      { id: "t4", event_description: "Notificacion a Agencia dentro de plazo legal", event_date: "2026-03-11T09:00:00", recorded_by: "Maria Lopez (DPO)" },
-      { id: "t5", event_description: "Notificacion a titulares afectados via correo y telefono", event_date: "2026-03-12T10:00:00", recorded_by: "Ana Rodriguez" },
+      { id: "t1", event_description: "Recepción de reclamos de usuarios que recibieron datos ajenos", event_date: "2026-03-10T11:00:00", recorded_by: "Mesa de Ayuda" },
+      { id: "t2", event_description: "Identificación de error en plantilla de correo masivo", event_date: "2026-03-10T14:30:00", recorded_by: "Ana Rodríguez", evidence_url: "/evidencias/BR-002/error-template.png" },
+      { id: "t3", event_description: "Detención del envío y recall de correos donde fue posible", event_date: "2026-03-10T15:00:00", recorded_by: "Equipo TI" },
+      { id: "t4", event_description: "Notificación a Agencia dentro de plazo legal", event_date: "2026-03-11T09:00:00", recorded_by: "María López (DPO)" },
+      { id: "t5", event_description: "Notificación a titulares afectados vía correo y teléfono", event_date: "2026-03-12T10:00:00", recorded_by: "Ana Rodríguez" },
     ],
     corrective_measures: [
-      { id: "cm1", description: "Implementar revision de destinatarios previo a envios masivos", responsible: "Equipo Desarrollo", due_date: "2026-03-20", completed: true },
-      { id: "cm2", description: "Agregar paso de validacion con aprobador antes de envio", responsible: "Ana Rodriguez", due_date: "2026-03-25", completed: false },
+      { id: "cm1", description: "Implementar revisión de destinatarios previo a envíos masivos", responsible: "Equipo Desarrollo", due_date: "2026-03-20", completed: true },
+      { id: "cm2", description: "Agregar paso de validación con aprobador antes de envío", responsible: "Ana Rodríguez", due_date: "2026-03-25", completed: false },
     ],
   },
   {
     id: "BR-003",
-    description: "Perdida de laptop corporativo con base de datos local de proveedores sin cifrado de disco.",
+    description: "Pérdida de laptop corporativo con base de datos local de proveedores sin cifrado de disco.",
     severity: "MEDIA",
     status: "RESUELTA",
     detected_date: "2026-02-20",
     affected_titulars_count: 85,
-    affected_data_types: ["Nombre", "RUT", "Cuenta bancaria", "Correo electronico"],
+    affected_data_types: ["Nombre", "RUT", "Cuenta bancaria", "Correo electrónico"],
     notified_agency: true,
     notified_titulars: true,
     responsible_user: "Pedro Soto",
     resolution_date: "2026-03-05",
     timeline: [
-      { id: "t1", event_description: "Reporte de perdida de equipo corporativo", event_date: "2026-02-20T09:00:00", recorded_by: "Pedro Soto" },
-      { id: "t2", event_description: "Identificacion de datos personales almacenados en disco local", event_date: "2026-02-20T14:00:00", recorded_by: "Equipo TI" },
+      { id: "t1", event_description: "Reporte de pérdida de equipo corporativo", event_date: "2026-02-20T09:00:00", recorded_by: "Pedro Soto" },
+      { id: "t2", event_description: "Identificación de datos personales almacenados en disco local", event_date: "2026-02-20T14:00:00", recorded_by: "Equipo TI" },
       { id: "t3", event_description: "Borrado remoto del equipo ejecutado", event_date: "2026-02-20T15:30:00", recorded_by: "Equipo TI", evidence_url: "/evidencias/BR-003/wipe-confirmation.pdf" },
-      { id: "t4", event_description: "Notificacion a Agencia y titulares completada", event_date: "2026-02-21T10:00:00", recorded_by: "Maria Lopez (DPO)" },
-      { id: "t5", event_description: "Caso cerrado - Medidas correctivas implementadas", event_date: "2026-03-05T16:00:00", recorded_by: "Maria Lopez (DPO)" },
+      { id: "t4", event_description: "Notificación a Agencia y titulares completada", event_date: "2026-02-21T10:00:00", recorded_by: "María López (DPO)" },
+      { id: "t5", event_description: "Caso cerrado - Medidas correctivas implementadas", event_date: "2026-03-05T16:00:00", recorded_by: "María López (DPO)" },
     ],
     corrective_measures: [
       { id: "cm1", description: "Cifrado obligatorio de discos en todos los equipos corporativos", responsible: "Equipo TI", due_date: "2026-03-15", completed: true },
-      { id: "cm2", description: "Politica de prohibicion de almacenamiento local de datos personales", responsible: "Maria Lopez (DPO)", due_date: "2026-03-10", completed: true },
+      { id: "cm2", description: "Política de prohibición de almacenamiento local de datos personales", responsible: "María López (DPO)", due_date: "2026-03-10", completed: true },
     ],
   },
   {
     id: "BR-004",
-    description: "Vulnerabilidad en formulario web permitio inyeccion SQL y posible acceso a datos de contacto de usuarios registrados.",
+    description: "Vulnerabilidad en formulario web permitió inyección SQL y posible acceso a datos de contacto de usuarios registrados.",
     severity: "BAJA",
     status: "DETECTADA",
     detected_date: "2026-03-19",
     affected_titulars_count: 0,
-    affected_data_types: ["Correo electronico", "Nombre de usuario"],
+    affected_data_types: ["Correo electrónico", "Nombre de usuario"],
     notified_agency: false,
     notified_titulars: false,
-    responsible_user: "Luis Fernandez",
+    responsible_user: "Luis Fernández",
     timeline: [
-      { id: "t1", event_description: "Reporte de vulnerabilidad detectada en test de penetracion", event_date: "2026-03-19T16:00:00", recorded_by: "Luis Fernandez", evidence_url: "/evidencias/BR-004/pentest-report.pdf" },
+      { id: "t1", event_description: "Reporte de vulnerabilidad detectada en test de penetración", event_date: "2026-03-19T16:00:00", recorded_by: "Luis Fernández", evidence_url: "/evidencias/BR-004/pentest-report.pdf" },
     ],
     corrective_measures: [],
   },
@@ -156,7 +156,7 @@ const mockBreaches: Breach[] = [
 
 const severityLabel = (s: string) => {
   switch (s) {
-    case "CRITICA": return "Critica"
+    case "CRITICA": return "Crítica"
     case "ALTA": return "Alta"
     case "MEDIA": return "Media"
     case "BAJA": return "Baja"
@@ -243,7 +243,7 @@ export default function BrechasPage() {
   }
 
   const handleNewBreachSubmit = () => {
-    alert("Brecha registrada exitosamente (mock). En produccion, se guardaria en Supabase.")
+    alert("Brecha registrada exitosamente (mock). En producción, se guardaría en Supabase.")
     setNewBreach({ detected_date: "", description: "", severity: "MEDIA", affected_data_types: "", affected_titulars_count: "", responsible_user: "" })
     setCurrentView("list")
   }
@@ -275,13 +275,13 @@ export default function BrechasPage() {
               <div>
                 <p className={`font-bold ${agencyDeadlinePassed ? "text-red-800" : "text-amber-800"}`}>
                   {agencyDeadlinePassed
-                    ? "PLAZO VENCIDO - Notificacion a Agencia de Proteccion de Datos"
-                    : "ACCION REQUERIDA - Notificar a Agencia de Proteccion de Datos"}
+                    ? "PLAZO VENCIDO - Notificación a Agencia de Protección de Datos"
+                    : "ACCIÓN REQUERIDA - Notificar a Agencia de Protección de Datos"}
                 </p>
                 <p className={`text-sm mt-1 ${agencyDeadlinePassed ? "text-red-700" : "text-amber-700"}`}>
-                  La Ley 21.719 exige notificar a la Agencia de Proteccion de Datos Personales
-                  dentro de las primeras 72 horas desde la deteccion de la brecha.
-                  Han transcurrido <strong>{hoursToNotify} horas</strong> desde la deteccion.
+                  La Ley 21.719 exige notificar a la Agencia de Protección de Datos Personales
+                  dentro de las primeras 72 horas desde la detección de la brecha.
+                  Han transcurrido <strong>{hoursToNotify} horas</strong> desde la detección.
                 </p>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function BrechasPage() {
                   <Calendar className="h-4 w-4 text-gray-600" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Fecha Deteccion</p>
+                  <p className="text-xs text-gray-500">Fecha Detección</p>
                   <p className="text-sm font-semibold">{formatDate(breach.detected_date)}</p>
                 </div>
               </div>
@@ -340,7 +340,7 @@ export default function BrechasPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
                 <FileWarning className="h-5 w-5 text-orange-500" />
-                Descripcion de la Brecha
+                Descripción de la Brecha
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -380,10 +380,10 @@ export default function BrechasPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-sm text-gray-900">
-                      Notificacion a Agencia de Proteccion de Datos Personales
+                      Notificación a Agencia de Protección de Datos Personales
                     </p>
                     <p className="text-xs text-gray-600 mt-1">
-                      Obligatoria dentro de 72 horas desde la deteccion de la brecha.
+                      Obligatoria dentro de 72 horas desde la detección de la brecha.
                       Debe incluir naturaleza de la brecha, datos afectados, medidas adoptadas y contacto del DPO.
                     </p>
                     {breach.notified_agency ? (
@@ -394,7 +394,7 @@ export default function BrechasPage() {
                           {agencyDeadlinePassed ? "Plazo vencido" : "Pendiente"}
                         </Badge>
                         <Button size="sm" variant="default" className="h-7 text-xs">
-                          Registrar Notificacion
+                          Registrar Notificación
                         </Button>
                       </div>
                     )}
@@ -412,7 +412,7 @@ export default function BrechasPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-sm text-gray-900">
-                      Notificacion a Titulares Afectados
+                      Notificación a Titulares Afectados
                     </p>
                     <p className="text-xs text-gray-600 mt-1">
                       Requerida cuando la brecha pueda afectar significativamente los derechos y libertades
@@ -424,7 +424,7 @@ export default function BrechasPage() {
                       <div className="mt-2 flex items-center gap-2">
                         <Badge variant="secondary">Pendiente</Badge>
                         <Button size="sm" variant="outline" className="h-7 text-xs">
-                          Registrar Notificacion
+                          Registrar Notificación
                         </Button>
                       </div>
                     )}
@@ -440,7 +440,7 @@ export default function BrechasPage() {
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2 text-base">
                   <Clock className="h-5 w-5 text-blue-600" />
-                  Linea de Tiempo
+                  Línea de Tiempo
                 </CardTitle>
                 <button
                   onClick={() => setExpandedTimeline(!expandedTimeline)}
@@ -502,7 +502,7 @@ export default function BrechasPage() {
             {expandedMeasures && (
               <CardContent>
                 {breach.corrective_measures.length === 0 ? (
-                  <p className="text-sm text-gray-500 italic">No se han registrado medidas correctivas aun.</p>
+                  <p className="text-sm text-gray-500 italic">No se han registrado medidas correctivas aún.</p>
                 ) : (
                   <div className="space-y-3">
                     {breach.corrective_measures.map((measure) => (
@@ -549,7 +549,7 @@ export default function BrechasPage() {
       <AppShell>
         <Header
           title="Registrar Nueva Brecha"
-          subtitle="Complete la informacion del incidente de seguridad"
+          subtitle="Complete la información del incidente de seguridad"
           actions={
             <Button variant="outline" onClick={() => setCurrentView("list")}>
               <ChevronLeft className="h-4 w-4 mr-1" /> Volver
@@ -563,8 +563,8 @@ export default function BrechasPage() {
             <div>
               <p className="font-bold text-sm text-amber-800">Recordatorio Legal</p>
               <p className="text-xs text-amber-700 mt-1">
-                Segun la Ley 21.719, la organizacion debe notificar a la Agencia de Proteccion de Datos Personales
-                dentro de las <strong>72 horas</strong> siguientes a la deteccion de una brecha que afecte datos personales.
+                Según la Ley 21.719, la organización debe notificar a la Agencia de Protección de Datos Personales
+                dentro de las <strong>72 horas</strong> siguientes a la detección de una brecha que afecte datos personales.
                 Registre la brecha lo antes posible para iniciar el conteo de plazos.
               </p>
             </div>
@@ -574,14 +574,14 @@ export default function BrechasPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
                 <ShieldAlert className="h-5 w-5 text-red-500" />
-                Informacion del Incidente
+                Información del Incidente
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Fecha de deteccion *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Fecha de detección *</label>
                     <Input
                       type="datetime-local"
                       value={newBreach.detected_date}
@@ -598,15 +598,15 @@ export default function BrechasPage() {
                       <option value="BAJA">Baja</option>
                       <option value="MEDIA">Media</option>
                       <option value="ALTA">Alta</option>
-                      <option value="CRITICA">Critica</option>
+                      <option value="CRITICA">Crítica</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Descripcion del incidente *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Descripción del incidente *</label>
                   <Textarea
-                    placeholder="Describa el incidente de seguridad, como se detecto, y el alcance conocido..."
+                    placeholder="Describa el incidente de seguridad, cómo se detectó, y el alcance conocido..."
                     rows={4}
                     value={newBreach.description}
                     onChange={(e) => setNewBreach({ ...newBreach, description: e.target.value })}
@@ -628,7 +628,7 @@ export default function BrechasPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">Titulares afectados (estimado)</label>
                     <Input
                       type="number"
-                      placeholder="Numero de personas afectadas"
+                      placeholder="Número de personas afectadas"
                       value={newBreach.affected_titulars_count}
                       onChange={(e) => setNewBreach({ ...newBreach, affected_titulars_count: e.target.value })}
                     />
@@ -665,7 +665,7 @@ export default function BrechasPage() {
     <AppShell>
       <Header
         title="Brechas de Seguridad"
-        subtitle="Gestion de incidentes de seguridad - Ley 21.719"
+        subtitle="Gestión de incidentes de seguridad - Ley 21.719"
         actions={
           <Button onClick={() => setCurrentView("new")}>
             <Plus className="h-4 w-4 mr-2" />
@@ -679,10 +679,10 @@ export default function BrechasPage() {
           <div className="flex items-start gap-3 p-4 rounded-lg bg-red-50 border-2 border-red-400">
             <Bell className="h-6 w-6 text-red-600 mt-0.5 flex-shrink-0 animate-pulse" />
             <div>
-              <p className="font-bold text-red-800">Brechas sin notificar a la Agencia de Proteccion de Datos</p>
+              <p className="font-bold text-red-800">Brechas sin notificar a la Agencia de Protección de Datos</p>
               <p className="text-sm text-red-700 mt-1">
-                Existen brechas activas que aun no han sido notificadas a la Agencia. La Ley 21.719 exige
-                notificacion dentro de 72 horas. Revise los incidentes pendientes de inmediato.
+                Existen brechas activas que aún no han sido notificadas a la Agencia. La Ley 21.719 exige
+                notificación dentro de 72 horas. Revise los incidentes pendientes de inmediato.
               </p>
             </div>
           </div>
@@ -697,7 +697,7 @@ export default function BrechasPage() {
             iconColor="text-gray-600 bg-gray-100"
           />
           <StatCard
-            title="Criticas"
+            title="Críticas"
             value={bySeverity.CRITICA}
             icon={AlertTriangle}
             iconColor="text-red-600 bg-red-50"
@@ -728,8 +728,8 @@ export default function BrechasPage() {
             description="sin resolver"
           />
           <StatCard
-            title="Resolucion Prom."
-            value={`${avgResolution} dias`}
+            title="Resolución Prom."
+            value={`${avgResolution} días`}
             icon={CheckCircle2}
             iconColor="text-green-600 bg-green-50"
           />
@@ -780,7 +780,7 @@ export default function BrechasPage() {
                         </span>
                         <span className="flex items-center gap-1">
                           <Clock className="h-3.5 w-3.5" />
-                          {hoursSinceDetection}h desde deteccion
+                          {hoursSinceDetection}h desde detección
                         </span>
                       </div>
                     </div>

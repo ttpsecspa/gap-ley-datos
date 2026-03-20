@@ -268,7 +268,7 @@ const mockData: DataInventoryItem[] = [
     access_areas: "TI, Seguridad de la Información",
     risk_level: "BAJO",
     notes: "Informar a usuarios sobre el monitoreo de actividad. Incluir en política de uso aceptable de sistemas.",
-    department: "Tecnologia",
+    department: "Tecnología",
     created_at: "2026-02-20",
     updated_at: "2026-03-01",
   },
@@ -533,11 +533,11 @@ export default function InventarioPage() {
                     <p className="text-sm text-gray-700">{selectedItem.recipients}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-500 mb-1">Plazo de Retencion</h4>
+                    <h4 className="text-sm font-semibold text-gray-500 mb-1">Plazo de Retención</h4>
                     <p className="text-sm text-gray-700">{selectedItem.retention_period}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-500 mb-1">Areas con Acceso</h4>
+                    <h4 className="text-sm font-semibold text-gray-500 mb-1">Áreas con Acceso</h4>
                     <p className="text-sm text-gray-700">{selectedItem.access_areas}</p>
                   </div>
                 </div>
@@ -560,7 +560,7 @@ export default function InventarioPage() {
                 <CardHeader>
                   <CardTitle className="text-sm flex items-center gap-2">
                     <Shield className="h-4 w-4 text-gray-500" />
-                    Informacion Tecnica
+                    Información Técnica
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -593,7 +593,7 @@ export default function InventarioPage() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div>
-                      <p className="text-xs font-semibold text-gray-500">Pais de Destino</p>
+                      <p className="text-xs font-semibold text-gray-500">País de Destino</p>
                       <p className="text-sm text-gray-700">{selectedItem.transfer_country}</p>
                     </div>
                     <div>
@@ -885,16 +885,16 @@ export default function InventarioPage() {
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Descripcion</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                   <Textarea
                     value={form.data_description}
                     onChange={(e) => setForm({ ...form, data_description: e.target.value })}
-                    placeholder="Descripcion detallada de los datos tratados..."
+                    placeholder="Descripción detallada de los datos tratados..."
                     rows={3}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Categoria *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Categoría *</label>
                   <select
                     value={form.data_category}
                     onChange={(e) => setForm({ ...form, data_category: e.target.value as DataCategory })}
@@ -927,7 +927,7 @@ export default function InventarioPage() {
                     <Textarea
                       value={form.purpose}
                       onChange={(e) => setForm({ ...form, purpose: e.target.value })}
-                      placeholder="Proposito para el cual se tratan los datos..."
+                      placeholder="Propósito para el cual se tratan los datos..."
                       rows={2}
                     />
                   </div>
@@ -948,7 +948,7 @@ export default function InventarioPage() {
                     <Input
                       value={form.legal_basis_detail}
                       onChange={(e) => setForm({ ...form, legal_basis_detail: e.target.value })}
-                      placeholder="Articulo o ley especifica..."
+                      placeholder="Artículo o ley específica..."
                     />
                   </div>
                 </div>
@@ -966,7 +966,7 @@ export default function InventarioPage() {
                     <Input
                       value={form.data_source}
                       onChange={(e) => setForm({ ...form, data_source: e.target.value })}
-                      placeholder="Ej: Formulario web, recopilacion directa..."
+                      placeholder="Ej: Formulario web, recopilación directa..."
                     />
                   </div>
                   <div>
@@ -986,15 +986,15 @@ export default function InventarioPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Plazo de Retencion</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Plazo de Retención</label>
                     <Input
                       value={form.retention_period}
                       onChange={(e) => setForm({ ...form, retention_period: e.target.value })}
-                      placeholder="Ej: 5 anos, hasta revocacion..."
+                      placeholder="Ej: 5 años, hasta revocación..."
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Areas con Acceso</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Áreas con Acceso</label>
                     <Input
                       value={form.access_areas}
                       onChange={(e) => setForm({ ...form, access_areas: e.target.value })}
@@ -1008,7 +1008,7 @@ export default function InventarioPage() {
               <div className="border-t border-gray-100 pt-4">
                 <h3 className="text-sm font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Database className="h-4 w-4 text-gray-500" />
-                  Informacion Tecnica
+                  Información Técnica
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -1061,7 +1061,7 @@ export default function InventarioPage() {
                   {form.international_transfer && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-7">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Pais de Destino</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">País de Destino</label>
                         <Input
                           value={form.transfer_country}
                           onChange={(e) => setForm({ ...form, transfer_country: e.target.value })}
