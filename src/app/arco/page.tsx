@@ -146,7 +146,7 @@ const mockRequests: (SubjectRequest & { assigned_to_name?: string })[] = [
     created_at: "2026-02-25T10:00:00Z",
     updated_at: "2026-03-05T14:00:00Z",
     logs: [
-      { id: "log-1", request_id: "req-001", action: "Solicitud recibida via formulario web", performed_by_id: "system", notes: null, performed_at: "2026-02-25T10:00:00Z" },
+      { id: "log-1", request_id: "req-001", action: "Solicitud recibida vía formulario web", performed_by_id: "system", notes: null, performed_at: "2026-02-25T10:00:00Z" },
       { id: "log-2", request_id: "req-001", action: "Asignada a Carlos Muñoz", performed_by_id: "user-admin", notes: "DPO asigna caso", performed_at: "2026-02-26T09:00:00Z" },
       { id: "log-3", request_id: "req-001", action: "Verificación de identidad completada", performed_by_id: "user-1", notes: "RUT validado contra registro civil", performed_at: "2026-02-28T11:30:00Z" },
       { id: "log-4", request_id: "req-001", action: "Recopilación de datos en curso", performed_by_id: "user-1", notes: "Consultando áreas de RRHH, Comercial y TI", performed_at: "2026-03-05T14:00:00Z" },

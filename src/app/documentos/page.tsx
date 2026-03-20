@@ -542,7 +542,7 @@ export default function DocumentosPage() {
                   <p className="text-sm font-medium">{tipoLabel[documentoDetalle.tipo]}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Version</p>
+                  <p className="text-xs text-gray-500">Versión</p>
                   <p className="text-sm font-medium">v{documentoDetalle.version}</p>
                 </div>
                 <div>
@@ -563,7 +563,7 @@ export default function DocumentosPage() {
                 )}
                 {documentoDetalle.fecha_aprobacion && (
                   <div>
-                    <p className="text-xs text-gray-500">Fecha aprobacion</p>
+                    <p className="text-xs text-gray-500">Fecha aprobación</p>
                     <p className="text-sm font-medium">{formatDate(documentoDetalle.fecha_aprobacion)}</p>
                   </div>
                 )}
@@ -765,7 +765,7 @@ export default function DocumentosPage() {
         {/* Workflow Legend */}
         <Card>
           <CardContent className="py-4">
-            <p className="text-xs font-medium text-gray-500 mb-2">Flujo de aprobacion de documentos</p>
+            <p className="text-xs font-medium text-gray-500 mb-2">Flujo de aprobación de documentos</p>
             <div className="flex items-center gap-2 flex-wrap">
               {ESTADOS_DOCUMENTO.map((estado, idx) => (
                 <div key={estado} className="flex items-center gap-2">
